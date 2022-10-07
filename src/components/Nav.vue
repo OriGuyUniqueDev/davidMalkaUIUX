@@ -7,7 +7,7 @@
 				<RouterLink key="about" to="/about">About</RouterLink>
 			</div>
 		</TransitionGroup>
-		<img @click="show = !show" class="md:hidden" src="../assets/icons/hamburger.png" alt="hamburger menu icon" />
+		<img @click="show = !show" class="md:hidden" src="../assets/icons/hamburger.svg" alt="hamburger menu icon" />
 	</nav>
 	<RouterView />
 </template>
