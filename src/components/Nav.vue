@@ -29,6 +29,9 @@
 </script>
 
 <style scoped>
+	nav{
+		position: relative;
+	}
 	@media (max-width: 834px) {
 		img {
 			width: 24px;
@@ -72,15 +75,6 @@
 		flex-direction: row;
 		gap: 1rem;
 	}
-	.navBarContainer {
-		padding: 3.7rem 1.6rem;
-		position: relative;
-		font-family: "Roboto", sans-serif;
-		font-weight: 400;
-		font-size: 1.6rem;
-		line-height: 2.268rem;
-		letter-spacing: 5%;
-	}
 	.logo {
 		font-family: "Playfair Display";
 		font-style: normal;
@@ -95,11 +89,13 @@
 	}
 	.navBarContainer {
 		padding: 3.7rem 1.6rem;
+		height: 9.6rem;
 		position: relative;
 		font-family: "Roboto", sans-serif;
 		font-weight: 400;
 		font-size: 1.8rem;
 		line-height: 2.268rem;
 		letter-spacing: 5%;
+		z-index: 999;
 	}
 </style>
