@@ -30,7 +30,7 @@
 
 <style scoped>
 	nav{
-		position: relative;
+		position: absolute;
 	}
 	@media (max-width: 834px) {
 		img {
@@ -47,7 +47,7 @@
 		}
 		.slide-enter-active,
 		.slide-leave-active {
-			transition: all 0.375s linear;
+			transition: all 0.25s linear;
 		}
 		.slide-enter-from,
 		.slide-leave-to {
@@ -97,5 +97,6 @@
 		line-height: 2.268rem;
 		letter-spacing: 5%;
 		z-index: 999;
+		
 	}
 </style>

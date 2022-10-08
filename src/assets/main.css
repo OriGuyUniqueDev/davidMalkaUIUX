@@ -10,9 +10,8 @@
 }
 html {
 	font-size: 62.5%;
-	overflow-x: hidden;
-	overscroll-behavior: none;
 }
 body {
 	overflow-x: hidden;
+	background-color: #1b1b1b;
 }

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="text-white  mainWrapper relative top-[27rem] md:top-[20rem]  z-50  w-[27.5rem] h-[12.4rem] md:w-[34.3rem] md:h-[16rem] lg:w-[48rem] lg:h-[20rem]  ">
+		<div class="text-white  mainWrapper relative top-[27rem] md:top-[20rem] z-10   w-[27.5rem] h-[12.4rem] md:w-[34.3rem] md:h-[16rem] lg:w-[48rem] lg:h-[20rem]  ">
             <h2 class="topHeader 
                      text-[1.4rem] leading-3 tracking-[0.08rem]  h-[0rem] relative top-5
                      md:text-[2rem]   md:h-[2.3rem]">

@@ -2,7 +2,7 @@
 	<div>
 		<div class="mainWrapper bg-hoverStyle flex  md:justify-around xl:justify-center xl:gap-80">
 			<HeroText></HeroText>
-			<ProfilePic></ProfilePic>
+			<ProfilePic></ProfilePic> 
 		</div>
 	</div>
 </template>
