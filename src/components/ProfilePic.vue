@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-	let imgUrl = "/src/assets/photos/profilePic.png";
+	let imgUrl = "@/assets/photos/profilePic.png";
 </script>
 
 <style lang="css" scoped>
