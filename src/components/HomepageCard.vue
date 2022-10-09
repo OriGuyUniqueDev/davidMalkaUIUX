@@ -7,7 +7,7 @@
     xl:w-[56.4rem]
     2xl:w-[69rem]
     ">
-        <img :src="`@/assets/images/${url}`" :alt="alt">
+        <img :src="props.url" :alt="alt">
         <h1>{{title}}</h1>
         <h2>{{role}}</h2>
         <button type="button">View project</button>
