@@ -19,22 +19,22 @@ import HomepageCard from "../components/HomepageCard.vue";
 		{
 			title:"Pa’amonim",
 			role: "UI/UX Design",
-			url: "@\\assets\\images\\paamonim.png"
+			url: "../src\\assets\\images\\paamonim.png"
 		},
 		{
 			title:"Ram Aderet",
 			role: "Product Design",
-			url: "@/assets/images/ramAderet.png"
+			url: "../src/assets/images/ramAderet.png"
 		},
 		{
 			title:"Patricia",
 			role: "Product Design",
-			url: "@/assets/images/patricia.png"
+			url: "../src/assets/images/patricia.png"
 		},
 		{
 			title:"Abra Web & Mobile",
 			role: "UI/UX Design",
-			url: "@/assets/images/Abra_Web_Mobile.png"
+			url: "../src/assets/images/Abra_Web_Mobile.png"
 		}
 	]
 </script>
