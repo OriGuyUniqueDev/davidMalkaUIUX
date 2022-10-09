@@ -1,6 +1,6 @@
 <template>
-	<div class="mainWrapper flex flex-col hover:scale-110 w-[34rem] h-[40rem] sm:w-full md:w-full lg:w-[80rem] xl:w-[56.4rem] 2xl:w-[69rem]">
-		<img  :src="url" :alt="alt" />
+	<div class="mainWrapper flex flex-col mx-auto ">
+		<img class="hover:scale-105 "  :src="url" :alt="alt" />
 		<h1>{{ title }}</h1>
 		<h2>{{ role }}</h2>
 		<button type="button">View project</button>
@@ -12,7 +12,7 @@
 </script>
 
 <style scoped>
-	.mainWrapper {
+	img {
 		transition: all 0.375s linear;
 	}
 </style>

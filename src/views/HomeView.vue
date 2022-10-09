@@ -1,11 +1,11 @@
 <template>
 	<div>
-		<div class="mainWrapper bg-hoverStyle flex md:justify-around xl:justify-center xl:gap-80">
+		<div class="mainWrapper h-[58.5rem]   bg-hoverStyle flex md:justify-around xl:justify-center xl:gap-80">
 			<HeroText></HeroText>
 			<ProfilePic></ProfilePic>
 		</div>
 	</div>
-	<div class="text-white flex flex-col w-full bg-black">
+	<div class="text-white flex flex-col  pt-[12.8rem] w-full bg-black">
 		<HomepageCard v-for="card in cardsData" :key="card.title" :alt="card.alt" :title="card.title" :role="card.role" :url="card.url"></HomepageCard>
 	</div>
 </template>
@@ -48,12 +48,5 @@
 </script>
 
 <style lang="css" scoped>
-	/* .mainWrapper {
-		position: relative;
-		top: 9.5rem;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		padding: 0 2rem;
-	} */
+
 </style>
