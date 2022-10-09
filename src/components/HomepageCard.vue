@@ -1,5 +1,12 @@
 <template>
-    <div class="mainWrapper flex flex-col hover:scale-110">
+    <div class="mainWrapper flex flex-col hover:scale-110
+    w-[34rem] h-[40rem]
+    sm:w-full 
+    md:w-full 
+    lg:w-[80rem]
+    xl:w-[56.4rem]
+    2xl:w-[69rem]
+    ">
         <img v-bind:src="url" alt="">
         <h1>{{title}}</h1>
         <h2>{{role}}</h2>

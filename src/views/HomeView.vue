@@ -5,7 +5,7 @@
 			<ProfilePic></ProfilePic> 
 		</div>
 	</div>
-	<div class="text-white flex flex-col ">
+	<div class="text-white flex flex-col w-full bg-black">
 		<HomepageCard v-for="card in cardsData" :key="card.title" :title="card.title" :role="card.role" :url="card.url"></HomepageCard>
 	</div>
 </template>
