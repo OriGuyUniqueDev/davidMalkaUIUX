@@ -26,6 +26,7 @@ module.exports = {
       current: 'currentColor',
       'white': '#ffffff',
       'grayStyle': '#7C7C7C',
+      'greyText': 'rgba(167, 167, 167, 1)',
       'black': '#1b1b1b',
       'hoverStyle': '#323232',
       'purple': '#A242D1',

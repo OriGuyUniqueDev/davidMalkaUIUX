@@ -1,13 +1,16 @@
 <template>
 	<div>
-		<div class="mainWrapper h-[58.5rem]   bg-hoverStyle flex md:justify-around xl:justify-center xl:gap-80">
+		<div class="mainWrapper h-[58.5rem] bg-hoverStyle flex md:justify-around xl:justify-center xl:gap-80">
 			<HeroText></HeroText>
 			<ProfilePic></ProfilePic>
 		</div>
 	</div>
-	<div class="text-white flex flex-col  pt-[12.8rem] w-full bg-black">
+	<div class="text-white flex flex-col md:mx-auto pt-[12.8rem] w-full bg-black">
 		<HomepageCard v-for="card in cardsData" :key="card.title" :alt="card.alt" :title="card.title" :role="card.role" :url="card.url"></HomepageCard>
 	</div>
+	<HomepageHiddenComponent></HomepageHiddenComponent>
+	<Footer></Footer>
+	
 </template>
 
 <script setup>
@@ -18,6 +21,8 @@
 	import paamonim from "@/assets/images/paamonim.png";
 	import patricia from "@/assets/images/patricia.png";
 	import ramAderet from "@/assets/images/ramAderet.png";
+	import HomepageHiddenComponent from "../components/HomepageHiddenComponent.vue";
+import Footer from "../components/Footer.vue";
 
 	const cardsData = [
 		{
@@ -47,6 +52,4 @@
 	];
 </script>
 
-<style lang="css" scoped>
-
-</style>
+<style lang="css" scoped></style>
