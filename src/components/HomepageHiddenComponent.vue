@@ -13,6 +13,7 @@
 .mainWrapper{
     display: grid;
     place-content: center;
+	box-shadow: 0rem 0rem 2rem #637b81;
 }
 	h1 {
 		font-size: 4.8rem;

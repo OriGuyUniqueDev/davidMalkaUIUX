@@ -1,5 +1,5 @@
 <template>
-	<div class="">
+	<div v-motion-slide-right class="">
 		<img class="
         w-[43.06rem] h-[38.6rem] left-[-70%] relative -top-20
         sm:w-[60rem] sm:h-[57.6rem] sm:left-0 

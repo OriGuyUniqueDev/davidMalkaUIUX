@@ -1,5 +1,5 @@
 <template>
-	<div ref="elementWidth"  class=" mainWrapper md:w-[80rem] md:mx-auto   flex flex-col mx-4 mb-8 lg:flex-row  lg:h-[40rem] lg:w-[96.3rem] lg:mb-[8.8rem] lg:gap-[14.7rem]">
+	<div   v-motion-fade ref="elementWidth"  class=" mainWrapper md:w-[80rem] md:mx-auto   flex flex-col mx-4 mb-8 lg:flex-row  lg:h-[40rem] lg:w-[96.3rem] lg:mb-[8.8rem] lg:gap-[14.7rem]">
 		<img  :src="url" :alt="alt" class="hover:scale-105
 		md:w-[80rem] md:h-[40rem]
 		lg:w-[56.4rem] 
