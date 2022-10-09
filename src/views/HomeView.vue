@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<div class="mainWrapper bg-hoverStyle flex  md:justify-around xl:justify-center xl:gap-80">
+		<div class="mainWrapper bg-hoverStyle flex md:justify-around xl:justify-center xl:gap-80">
 			<HeroText></HeroText>
-			<ProfilePic></ProfilePic> 
+			<ProfilePic></ProfilePic>
 		</div>
 	</div>
 	<div class="text-white flex flex-col w-full bg-black">
@@ -11,36 +11,40 @@
 </template>
 
 <script setup>
-	import HeroText from "../components/HeroText.vue";
-	import ProfilePic from "../components/ProfilePic.vue";
-import HomepageCard from "../components/HomepageCard.vue";
+	import HeroText from "@/components/HeroText.vue";
+	import ProfilePic from "@/components/ProfilePic.vue";
+	import HomepageCard from "@/components/HomepageCard.vue";
+	import AbraWebMobile from "@/assets/images/Abra_Web_Mobile.png";
+	import paamonim from "@/assets/images/paamonim.png";
+	import patricia from "@/assets/images/patricia.png";
+	import ramAderet from "@/assets/images/ramAderet.png";
 
 	const cardsData = [
 		{
-			title:"Pa’amonim",
+			title: "Pa’amonim",
 			role: "UI/UX Design",
-			url: "/assets/images/paamonim.png",
-			alt: 'Pa’amonim project pic'
+			url: paamonim,
+			alt: "Pa’amonim project pic",
 		},
 		{
-			title:"Ram Aderet",
+			title: "Ram Aderet",
 			role: "Product Design",
-			url: "/assets/images/ramAderet.png",
-			alt: 'Ram Aderet project pic'
+			url: ramAderet,
+			alt: "Ram Aderet project pic",
 		},
 		{
-			title:"Patricia",
+			title: "Patricia",
 			role: "Product Design",
-			url: "/assets/images/patricia.png",
-			alt: 'Patricia project pic'
+			url: patricia,
+			alt: "Patricia project pic",
 		},
 		{
-			title:"Abra Web & Mobile",
+			title: "Abra Web & Mobile",
 			role: "UI/UX Design",
-			url: "/assets/images/Abra_Web_Mobile.png",
-			alt: 'Abra Web & Mobile project pic'
-		}
-	]
+			url: AbraWebMobile,
+			alt: "Abra Web & Mobile project pic",
+		},
+	];
 </script>
 
 <style lang="css" scoped>
