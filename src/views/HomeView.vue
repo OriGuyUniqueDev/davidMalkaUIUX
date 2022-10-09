@@ -6,7 +6,7 @@
 		</div>
 	</div>
 	<div class="text-white flex flex-col w-full bg-black">
-		<HomepageCard v-for="card in cardsData" :key="card.title" :title="card.title" :role="card.role" :url="card.url"></HomepageCard>
+		<HomepageCard v-for="card in cardsData" :key="card.title" :alt="card.alt" :title="card.title" :role="card.role" :url="card.url"></HomepageCard>
 	</div>
 </template>
 
@@ -19,22 +19,26 @@ import HomepageCard from "../components/HomepageCard.vue";
 		{
 			title:"Pa’amonim",
 			role: "UI/UX Design",
-			url: "src/assets/images/paamonim.png"
+			url: "paamonim.png",
+			alt: 'Pa’amonim project pic'
 		},
 		{
 			title:"Ram Aderet",
 			role: "Product Design",
-			url: "src/assets/images/ramAderet.png"
+			url: "ramAderet.png",
+			alt: 'Ram Aderet project pic'
 		},
 		{
 			title:"Patricia",
 			role: "Product Design",
-			url: "src/assets/images/patricia.png"
+			url: "patricia.png",
+			alt: 'Patricia project pic'
 		},
 		{
 			title:"Abra Web & Mobile",
 			role: "UI/UX Design",
-			url: "src/assets/images/Abra_Web_Mobile.png"
+			url: "Abra_Web_Mobile.png",
+			alt: 'Abra Web & Mobile project pic'
 		}
 	]
 </script>

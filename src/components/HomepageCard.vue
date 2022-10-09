@@ -7,7 +7,7 @@
     xl:w-[56.4rem]
     2xl:w-[69rem]
     ">
-        <img v-bind:src="url" alt="">
+        <img :src="`@/assets/images/${url}`" :alt="alt">
         <h1>{{title}}</h1>
         <h2>{{role}}</h2>
         <button type="button">View project</button>
@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-    const props = defineProps(['title',"role","url"])
+    const props = defineProps(['title',"role","url","alt"])
     console.log(props.url);
 </script>
 
