@@ -1,5 +1,5 @@
 <template>
-	<nav  ref="elementWidth" class="flex justify-between bg-hoverStyle navBarContainer">
+	<nav ref="elementWidth" class="flex justify-between bg-hoverStyle navBarContainer">
 		<div class="logo"><span class="font-bold">David</span>Malka</div>
 		<TransitionGroup name="slide">
 			<div v-if="show || width >= 833" key="wrapper" class="linkWrapper mobileOpen text-white flex">
@@ -9,32 +9,36 @@
 		</TransitionGroup>
 		<img @click="show = !show" class="md:hidden" src="../assets/icons/hamburger.svg" alt="hamburger menu icon" />
 	</nav>
-	<RouterView />
+	<router-view v-slot="{ Component,route }">
+		<transition  :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass">
+			<component :is="Component" />
+		</transition>
+	</router-view>
 </template>
 <script>
 	import { ref } from "vue";
 	import { useElementSize } from "@vueuse/core";
 	import { useMotion } from "@vueuse/motion";
-	
+
 	export default {
 		setup() {
 			let show = ref(false);
 			let elementWidth = ref(null);
 			const { width } = useElementSize(elementWidth);
-	const motionInstance = useMotion(elementWidth, {
-		initial: {
-			opacity: 0,
-			y: -100,
-		},
-		enter: {
-			opacity: 1,
-			y: -1,
-			transition: {
-				delay:500,
-				duration: 1000
-			},
-		},
-	});
+			const motionInstance = useMotion(elementWidth, {
+				initial: {
+					opacity: 0,
+					y: -100,
+				},
+				enter: {
+					opacity: 1,
+					y: -1,
+					transition: {
+						delay: 500,
+						duration: 1000,
+					},
+				},
+			});
 			return {
 				show,
 				elementWidth,
@@ -45,7 +49,7 @@
 </script>
 
 <style scoped>
-	nav{
+	nav {
 		position: absolute;
 	}
 	@media (max-width: 834px) {
@@ -113,6 +117,5 @@
 		line-height: 2.268rem;
 		letter-spacing: 5%;
 		z-index: 999;
-		
 	}
 </style>
