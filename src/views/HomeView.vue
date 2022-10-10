@@ -9,8 +9,6 @@
 		<HomepageCard v-for="card in cardsData" :key="card.title" :alt="card.alt" :title="card.title" :role="card.role" :url="card.url"></HomepageCard>
 	</div>
 	<HomepageHiddenComponent></HomepageHiddenComponent>
-	<Footer></Footer>
-	
 </template>
 
 <script setup>
@@ -22,7 +20,7 @@
 	import patricia from "@/assets/images/patricia.png";
 	import ramAderet from "@/assets/images/ramAderet.png";
 	import HomepageHiddenComponent from "../components/HomepageHiddenComponent.vue";
-import Footer from "../components/Footer.vue";
+
 
 	const cardsData = [
 		{

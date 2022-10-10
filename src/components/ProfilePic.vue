@@ -1,5 +1,5 @@
 <template>
-	<div v-motion-slide-right class="">
+	<div ref="target" class="">
 		<img class="
         w-[43.06rem] h-[38.6rem] left-[-70%] relative -top-20
         sm:w-[60rem] sm:h-[57.6rem] sm:left-0 
@@ -10,7 +10,22 @@
 </template>
 
 <script setup>
-	
+		import { useMotion } from "@vueuse/motion";
+	import { ref } from "vue";
+	const target = ref();
+	const motionInstance = useMotion(target, {
+		initial: {
+			opacity: 0,
+			x: 200,
+		},
+		enter: {
+			opacity: 1,
+			x:0,
+			transition: {
+				duration: 1000
+			},
+		},
+	});
 </script>
 
 <style lang="css" scoped>

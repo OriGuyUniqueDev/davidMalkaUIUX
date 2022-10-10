@@ -1,5 +1,5 @@
 <template>
-	<div   v-motion-fade ref="elementWidth"  class=" mainWrapper md:w-[80rem] md:mx-auto   flex flex-col mx-4 mb-8 lg:flex-row  lg:h-[40rem] lg:w-[96.3rem] lg:mb-[8.8rem] lg:gap-[14.7rem]">
+	<div   ref="elementWidth"  class=" mainWrapper md:w-[80rem] md:mx-auto   flex flex-col mx-4 mb-8 lg:flex-row  lg:h-[40rem] lg:w-[96.3rem] lg:mb-[8.8rem] lg:gap-[14.7rem]">
 		<img  :src="url" :alt="alt" class="hover:scale-105
 		md:w-[80rem] md:h-[40rem]
 		lg:w-[56.4rem] 
@@ -27,9 +27,21 @@
 <script setup>
 	import { ref } from "vue";
 	import { useElementSize } from "@vueuse/core";
+	import { useMotion } from "@vueuse/motion";
 	const props = defineProps(["title", "role", "url", "alt"]);
 	let elementWidth = ref(null);
 	const { width } = useElementSize(elementWidth);
+	const motionInstance = useMotion(elementWidth, {
+		initial: {
+			opacity: 0,
+		},
+		visible: {
+			opacity: 1,
+			transition: {
+				duration: 1000
+			},
+		},
+	});
 </script>
 
 <style scoped>

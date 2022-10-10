@@ -1,5 +1,5 @@
 <template>
-	<nav v-motion-slide-top ref="elementWidth" class="flex justify-between bg-hoverStyle navBarContainer">
+	<nav  ref="elementWidth" class="flex justify-between bg-hoverStyle navBarContainer">
 		<div class="logo"><span class="font-bold">David</span>Malka</div>
 		<TransitionGroup name="slide">
 			<div v-if="show || width >= 833" key="wrapper" class="linkWrapper mobileOpen text-white flex">
@@ -14,11 +14,27 @@
 <script>
 	import { ref } from "vue";
 	import { useElementSize } from "@vueuse/core";
+	import { useMotion } from "@vueuse/motion";
+	
 	export default {
 		setup() {
 			let show = ref(false);
 			let elementWidth = ref(null);
 			const { width } = useElementSize(elementWidth);
+	const motionInstance = useMotion(elementWidth, {
+		initial: {
+			opacity: 0,
+			y: -100,
+		},
+		enter: {
+			opacity: 1,
+			y: -1,
+			transition: {
+				delay:500,
+				duration: 1000
+			},
+		},
+	});
 			return {
 				show,
 				elementWidth,
