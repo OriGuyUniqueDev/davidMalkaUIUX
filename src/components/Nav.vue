@@ -7,7 +7,8 @@
 				<RouterLink key="about" to="/about">About</RouterLink>
 			</div>
 		</TransitionGroup>
-		<img @click="show = !show" class="md:hidden" src="../assets/icons/hamburger.svg" alt="hamburger menu icon" />
+		<img @click="show = !show" class="md:hidden" v-if="show" src="@/assets/images/icons/close.svg" alt="close menu icon" />
+		<img @click="show = !show" class="md:hidden" v-else src="@/assets/images/icons/hamburger.svg" alt="hamburger menu icon" />
 	</nav>
 	<router-view v-slot="{ Component,route }">
 		<transition  :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass">
@@ -18,7 +19,7 @@
 <script>
 	import { ref } from "vue";
 	import { useElementSize } from "@vueuse/core";
-	import { useMotion } from "@vueuse/motion";
+	import { useMotion } from "@vueuse/motion";	
 
 	export default {
 		setup() {
@@ -52,6 +53,10 @@
 	nav {
 		position: absolute;
 	}
+	img{
+		position: relative;
+		z-index: 999;
+	}
 	@media (max-width: 834px) {
 		img {
 			width: 24px;
@@ -60,10 +65,8 @@
 			background-color: #323232;
 			position: absolute;
 			width: 100%;
-			height: max-content;
-			bottom: -100%;
 			left: 0;
-			padding: 3.7rem 1.6rem;
+			padding: 0 1.6rem;
 		}
 		.slide-enter-active,
 		.slide-leave-active {
