@@ -7,8 +7,9 @@
 				<RouterLink key="about" to="/about">About</RouterLink>
 			</div>
 		</TransitionGroup>
-		<img @click="show = !show" class="md:hidden" v-if="show" src="@/assets/images/icons/close.svg" alt="close menu icon" />
-		<img @click="show = !show" class="md:hidden" v-else src="@/assets/images/icons/hamburger.svg" alt="hamburger menu icon" />
+		<img @click="show = !show" class="md:hidden" v-if="show" src="@/assets/images/icons/closeMenu.png" alt="close menu icon" />
+		<img @click="show = !show" class="md:hidden" v-else src="@/assets/images/icons/openMenu.png" alt="hamburger menu icon" />
+		
 	</nav>
 	<router-view v-slot="{ Component,route }">
 		<transition  :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass">
