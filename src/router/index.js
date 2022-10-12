@@ -31,8 +31,8 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach((to,from,next) => {
+router.afterEach((to,from) => {
   (to.name !== "home") ? document.title = to.meta.title : document.title = "David Malka UX/UI"
-  next()
+
 })
 export default router
