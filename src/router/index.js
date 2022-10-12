@@ -10,16 +10,19 @@ const router = createRouter({
       component: HomeView,
       meta:{
         enterClass:'animate__animated animate__fadeInLeft',
-        leaveClass:'animate__animated animate__fadeOutRight'
-      }
+        leaveClass:'animate__animated animate__fadeOutRight',
+      },
+      props:true
     },
     {
       path: '/about',
       name: 'about',
       meta:{
         enterClass:'animate__animated animate__fadeInRight',
-        leaveClass:'animate__animated animate__fadeOutLeft'
+        leaveClass:'animate__animated animate__fadeOutLeft',
+        title:"David Malka - About"
       },
+      props:true,
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -28,4 +31,8 @@ const router = createRouter({
   ]
 })
 
+router.beforeEach((to,from,next) => {
+  (to.name !== "home") ? document.title = to.meta.title : document.title = "David Malka UX/UI"
+  next()
+})
 export default router

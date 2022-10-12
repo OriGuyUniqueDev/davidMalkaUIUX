@@ -20,8 +20,6 @@
 	import patricia from "@/assets/images/patricia.png";
 	import ramAderet from "@/assets/images/ramAderet.png";
 	import HomepageHiddenComponent from "../components/HomepageHiddenComponent.vue";
-
-
 	const cardsData = [
 		{
 			title: "Pa’amonim",

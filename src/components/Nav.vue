@@ -3,58 +3,43 @@
 		<div class="logo"><span class="font-bold">David</span>Malka</div>
 		<TransitionGroup name="slide">
 			<div v-if="show || width >= 833" key="wrapper" class="linkWrapper mobileOpen text-white flex">
-				<RouterLink key="home" class="mr-4" to="/">Home</RouterLink>
-				<RouterLink key="about" to="/about">About</RouterLink>
+				<RouterLink key="home" class="mr-4" :to="{name: 'home'}">Home</RouterLink>
+				<RouterLink key="about" :to="{name: 'about' }">About</RouterLink>
 			</div>
 		</TransitionGroup>
 		<img @click="show = !show" class="md:hidden" v-if="show" src="@/assets/images/icons/closeMenu.png" alt="close menu icon" />
 		<img @click="show = !show" class="md:hidden" v-else src="@/assets/images/icons/openMenu.png" alt="hamburger menu icon" />
-		
 	</nav>
-	<router-view v-slot="{ Component,route }">
-		<transition  :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass">
-			<component :is="Component" />
-		</transition>
-	</router-view>
 </template>
-<script>
+<script setup>
 	import { ref } from "vue";
 	import { useElementSize } from "@vueuse/core";
-	import { useMotion } from "@vueuse/motion";	
+	import { useMotion } from "@vueuse/motion";
 
-	export default {
-		setup() {
-			let show = ref(false);
-			let elementWidth = ref(null);
-			const { width } = useElementSize(elementWidth);
-			const motionInstance = useMotion(elementWidth, {
-				initial: {
-					opacity: 0,
-					y: -100,
-				},
-				enter: {
-					opacity: 1,
-					y: -1,
-					transition: {
-						delay: 500,
-						duration: 1000,
-					},
-				},
-			});
-			return {
-				show,
-				elementWidth,
-				width,
-			};
+	let show = ref(false);
+	let elementWidth = ref(null);
+	const { width } = useElementSize(elementWidth);
+	const motionInstance = useMotion(elementWidth, {
+		initial: {
+			opacity: 0,
+			y: -100,
 		},
-	};
+		enter: {
+			opacity: 1,
+			y: -1,
+			transition: {
+				delay: 500,
+				duration: 1000,
+			},
+		},
+	});
 </script>
 
 <style scoped>
 	nav {
 		position: absolute;
 	}
-	img{
+	img {
 		position: relative;
 		z-index: 999;
 	}

@@ -7,6 +7,11 @@ import Developer from './components/Developer.vue';
 
 <template>
   <Nav></Nav>
+  <router-view v-slot="{ Component, route } ">
+		<transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass">
+			<component :is="Component"  />
+		</transition>
+	</router-view>
   <Footer></Footer>
   <Developer></Developer>
 </template>
