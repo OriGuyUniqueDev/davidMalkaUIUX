@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div :class="[data.bgColor]">
 		<ProjectHero :bgColor1="data.bgColor" :topImage="data.topImage"></ProjectHero>
 		
 	</div>
