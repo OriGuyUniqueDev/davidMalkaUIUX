@@ -12,7 +12,6 @@ const router = createRouter({
         enterClass:'animate__animated animate__fadeInLeft',
         leaveClass:'animate__animated animate__fadeOutRight',
       },
-      props:true
     },
     {
       path: '/about',
@@ -22,12 +21,19 @@ const router = createRouter({
         leaveClass:'animate__animated animate__fadeOutLeft',
         title:"David Malka - About"
       },
-      props:true,
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
-    }
+    },
+    {
+      path: '/project',
+      name: 'project',
+      meta:{
+        enterClass:'animate__animated animate__fadeInRight',
+        leaveClass:'animate__animated animate__fadeOutLeft',
+        title:"Project"
+      },
+      props:true,
+      component: () => import('../views/ProjectPage.vue')
+    },
   ]
 })
 

@@ -1,10 +1,12 @@
 <template>
 	<div   ref="elementWidth"  class=" mainWrapper md:w-[80rem] md:mx-auto   flex flex-col mx-4 mb-8 lg:flex-row  lg:h-[40rem] lg:w-[96.3rem] lg:mb-[8.8rem] lg:gap-[14.7rem]">
-		<img  :src="url" :alt="alt" class="hover:scale-105
-		md:w-[80rem] md:h-[40rem]
-		lg:w-[56.4rem] 
-		2xl:w-[69rem]
-		"/>
+		<RouterLink :to="{ name: 'project' }">
+			<img  :src="url" :alt="alt" class="hover:scale-105
+			md:w-[80rem] md:h-[40rem]
+			lg:w-[56.4rem] 
+			2xl:w-[69rem]
+			"/>
+		</RouterLink>
 		<div class="textButtonWrapper flex justify-between lg:flex-col lg:justify-evenly my-4 ">
 			<div>
 				<h1 class="text-[900]
@@ -14,11 +16,13 @@
 				text-[3.2rem] leading-[4.032rem]
 				">{{ role }}</h2>
 			</div>
-			<button v-if="width >= 550" type="button" class="
-			self-center
-			w-[14.6rem] h-[4.5rem]
-			lg:self-start
-				">View project</button>
+			<RouterLink :to="{ name: 'project'}">
+				<button v-if="width >= 550" type="button" class="
+				self-center
+				w-[14.6rem] h-[4.5rem]
+				lg:self-start
+					">View project</button>
+			</RouterLink>
 				
 		</div>
 	</div>
