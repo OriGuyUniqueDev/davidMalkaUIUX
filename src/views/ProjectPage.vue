@@ -6,12 +6,10 @@
 </template>
 
 <script setup>
-
 import ProjectHero from '../components/ProjectHero.vue'
 	let props = defineProps(['id','data'])
 	console.log(props.data);
 	console.log(props.data.bgColor);
-	
 </script>
 
 <style scoped>

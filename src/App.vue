@@ -14,7 +14,7 @@
 		{
 			projectName: "Pa’amonim",
 			bgColor: `bg-purple`,
-			topImage: "@/assets/images/projectsImages/paamonim/topImage.svg",
+			topImage: "/projectsImages/paamonim/topImage.svg",
 			projectTitle: "About the project",
 			details: `Paamonim is a non-profit social organization.
 The organization strives for a reality in which families in Israel lead an economically balanced and responsible life - a reality that will help build socio-economic resilience.
