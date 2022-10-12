@@ -1,13 +1,15 @@
 <template>
 	<nav ref="elementWidth" class="flex justify-between bg-hoverStyle navBarContainer">
 		<div v-if="!show" class="flex flex-row gap-[1.95rem]">
-			<img class="backArrow" src="../assets/images/icons/backIcon.svg" alt="">
-			<div  class="logo">{{logoTitle}}</div>
+			<RouterLink :to="{name: 'home'}">
+				<img class="backArrow relative top-[0.8rem]" src="../assets/images/icons/backIcon.svg" alt="" />
+			</RouterLink>
+			<div class="logo">{{ logoTitle }}</div>
 		</div>
 		<TransitionGroup name="slide">
 			<div v-if="show || width >= 833" key="wrapper" class="linkWrapper mobileOpen text-white flex">
-				<RouterLink key="home" class="mr-4" :to="{name: 'home'}">Home</RouterLink>
-				<RouterLink key="about" :to="{name: 'about' }">About</RouterLink>
+				<RouterLink key="home" class="mr-4" :to="{ name: 'home' }">Home</RouterLink>
+				<RouterLink key="about" :to="{ name: 'about' }">About</RouterLink>
 			</div>
 		</TransitionGroup>
 		<img @click="show = !show" class="md:hidden" v-if="show" src="@/assets/images/icons/closeMenu.png" alt="close menu icon" />
@@ -18,8 +20,8 @@
 	import { ref } from "vue";
 	import { useElementSize } from "@vueuse/core";
 	import { useMotion } from "@vueuse/motion";
-	import { useRoute } from 'vue-router'
-    const route = useRoute()
+	import { useRoute } from "vue-router";
+	const route = useRoute();
 	let show = ref(false);
 	let elementWidth = ref(null);
 	const { width } = useElementSize(elementWidth);
@@ -37,7 +39,7 @@
 			},
 		},
 	});
-	let logoTitle = route.params.id
+	let logoTitle = route.params.id;
 </script>
 
 <style scoped>
@@ -49,7 +51,7 @@
 		right: 0;
 		z-index: 999;
 	}
-	.backArrow{
+	.backArrow {
 		position: relative;
 		left: 0;
 		z-index: 999;
@@ -102,7 +104,6 @@
 		font-size: 2.1rem;
 		/* line-height: 2.2rem; */
 		color: white;
-
 	}
 	.navBarContainer {
 		/* padding: 3.7rem 1.6rem; */
