@@ -192,7 +192,7 @@ Bells guides and provides financial advice to anyone interested, and provides th
 		{
 			projectName: "Ram Aderet",
 			bgColor: `bg-lightBlue`,
-			topImage: "/projectsImages/ramAderet/topImage.svg",
+			topImage: "/projectsImages/ramAderet/topImage.png",
 			projectTitle: "About the project",
 			details: `Paamonim is a non-profit social organization.
 The organization strives for a reality in which families in Israel lead an economically balanced and responsible life - a reality that will help build socio-economic resilience.
