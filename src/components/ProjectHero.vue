@@ -1,6 +1,6 @@
 <template>
-    <div :class="[bgColor1]" class="mainWrapper w-full h-max pt-[6.3rem]" >
-        <img :src="topImage" class=" w-full pt-[6.7rem]"  alt="top image">
+    <div :class="[bgColor1]" class="mainWrapper h-max pt-[6.3rem]" >
+        <img :src="topImage" class="imgTag  pt-[6.7rem]"  alt="top image">
     </div>
 </template>
 
@@ -16,6 +16,9 @@
         top: -6.3rem;
         bottom: 47.1rem;
         right: 0;
+    }
+    img{
+        position: relative;
         
     }
 </style>
