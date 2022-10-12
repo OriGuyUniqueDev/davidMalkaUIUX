@@ -1,6 +1,9 @@
 <template>
 	<nav ref="elementWidth" class="flex justify-between bg-hoverStyle navBarContainer">
-		<div class="logo">Project</div>
+		<div v-if="!show" class="flex flex-row gap-[1.95rem]">
+			<img class="backArrow" src="../assets/images/icons/backIcon.svg" alt="">
+			<div  class="logo">{{logoTitle}}</div>
+		</div>
 		<TransitionGroup name="slide">
 			<div v-if="show || width >= 833" key="wrapper" class="linkWrapper mobileOpen text-white flex">
 				<RouterLink key="home" class="mr-4" :to="{name: 'home'}">Home</RouterLink>
@@ -15,7 +18,8 @@
 	import { ref } from "vue";
 	import { useElementSize } from "@vueuse/core";
 	import { useMotion } from "@vueuse/motion";
-
+	import { useRoute } from 'vue-router'
+    const route = useRoute()
 	let show = ref(false);
 	let elementWidth = ref(null);
 	const { width } = useElementSize(elementWidth);
@@ -33,6 +37,7 @@
 			},
 		},
 	});
+	let logoTitle = route.params.id
 </script>
 
 <style scoped>
@@ -40,7 +45,13 @@
 		position: absolute;
 	}
 	img {
+		position: absolute;
+		right: 0;
+		z-index: 999;
+	}
+	.backArrow{
 		position: relative;
+		left: 0;
 		z-index: 999;
 	}
 	@media (max-width: 834px) {
@@ -48,11 +59,11 @@
 			width: 24px;
 		}
 		.mobileOpen {
-			background-color: #323232;
+			background-color: transparent;
 			position: absolute;
 			width: 100%;
 			left: 0;
-			padding: 0 1.6rem;
+			/* padding: 0 1.6rem; */
 		}
 		.slide-enter-active,
 		.slide-leave-active {
@@ -85,26 +96,27 @@
 		gap: 1rem;
 	}
 	.logo {
-		font-family: "Playfair Display";
+		font-family: "Outfit";
 		font-style: normal;
-		font-weight: 700;
+		font-weight: 400;
 		font-size: 2.1rem;
 		line-height: 2.2rem;
-		background: linear-gradient(96.02deg, #ff1392 -1.37%, #7b3ce1 46.36%, #10a9ff 95.6%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		text-fill-color: transparent;
+		color: white;
+
 	}
 	.navBarContainer {
-		padding: 3.7rem 1.6rem;
-		height: 9.6rem;
+		/* padding: 3.7rem 1.6rem; */
+		background-color: transparent;
+		margin-inline: 1.6rem;
+		display: grid;
+		align-items: center;
+		height: 6.3rem;
 		position: relative;
 		font-family: "Roboto", sans-serif;
 		font-weight: 400;
 		font-size: 1.8rem;
 		line-height: 2.268rem;
 		letter-spacing: 5%;
-		z-index: 999;
+		z-index: 1;
 	}
 </style>

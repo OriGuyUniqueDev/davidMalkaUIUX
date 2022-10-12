@@ -1,6 +1,6 @@
 <template>
 	<div   ref="elementWidth"  class=" mainWrapper md:w-[80rem] md:mx-auto   flex flex-col mx-4 mb-8 lg:flex-row  lg:h-[40rem] lg:w-[96.3rem] lg:mb-[8.8rem] lg:gap-[14.7rem]">
-		<RouterLink :to="{ name: 'project' }">
+		<RouterLink :to="{ name: 'project', params: {id: title} }">
 			<img  :src="url" :alt="alt" class="hover:scale-105
 			md:w-[80rem] md:h-[40rem]
 			lg:w-[56.4rem] 
@@ -16,7 +16,7 @@
 				text-[3.2rem] leading-[4.032rem]
 				">{{ role }}</h2>
 			</div>
-			<RouterLink :to="{ name: 'project'}">
+			<RouterLink :to="{ name: 'project', params: {id: title} }">
 				<button v-if="width >= 550" type="button" class="
 				self-center
 				w-[14.6rem] h-[4.5rem]

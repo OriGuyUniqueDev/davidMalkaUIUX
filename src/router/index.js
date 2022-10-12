@@ -24,7 +24,7 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/project',
+      path: '/project:/:id',
       name: 'project',
       meta:{
         enterClass:'animate__animated animate__fadeInRight',
