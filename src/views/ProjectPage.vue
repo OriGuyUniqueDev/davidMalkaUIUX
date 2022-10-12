@@ -1,5 +1,5 @@
 <template>
-	<div :class="[data.bgColor]">
+	<div >
 		<ProjectHero :bgColor1="data.bgColor" :topImage="data.topImage"></ProjectHero>
 		
 	</div>
@@ -8,8 +8,6 @@
 <script setup>
 import ProjectHero from '../components/ProjectHero.vue'
 	let props = defineProps(['id','data'])
-	console.log(props.data);
-	console.log(props.data.bgColor);
 </script>
 
 <style scoped>

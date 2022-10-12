@@ -100,7 +100,7 @@
 		font-style: normal;
 		font-weight: 400;
 		font-size: 2.1rem;
-		line-height: 2.2rem;
+		/* line-height: 2.2rem; */
 		color: white;
 
 	}
@@ -112,10 +112,10 @@
 		align-items: center;
 		height: 6.3rem;
 		position: relative;
-		font-family: "Roboto", sans-serif;
+		font-family: "Outfit", sans-serif;
 		font-weight: 400;
 		font-size: 1.8rem;
-		line-height: 2.268rem;
+		/* line-height: 2.268rem; */
 		letter-spacing: 5%;
 		z-index: 1;
 	}

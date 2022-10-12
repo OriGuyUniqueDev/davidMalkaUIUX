@@ -1,6 +1,6 @@
 <template>
-    <div :class="[bgColor1]" class=" mainWrapper w-full max-h-max pt-[6.3rem]">
-        <img class="pt-[6.7rem] w-full" :src="[topImage]" alt="top image">
+    <div :class="[bgColor1]" class="mainWrapper w-full h-max pt-[6.3rem]" >
+        <img :src="topImage" class=" w-full pt-[6.7rem]"  alt="top image">
     </div>
 </template>
 
@@ -14,5 +14,8 @@
     .mainWrapper{
         position: relative;
         top: -6.3rem;
+        bottom: 47.1rem;
+        right: 0;
+        
     }
 </style>
