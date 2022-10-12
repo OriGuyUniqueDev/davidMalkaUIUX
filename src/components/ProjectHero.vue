@@ -1,6 +1,6 @@
 <template>
     <div :class="[bgColor1]" class="mainWrapper h-max  pt-[6.3rem]" >
-            <img :src="topImage" class="mt-[6.7rem] relative -top-3 scale-105"  alt="top image">
+            <img :src="topImage" class="mt-[6.7rem] relative -top-2 scale-105"  alt="top image">
     </div>
 </template>
 
