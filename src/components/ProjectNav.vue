@@ -35,7 +35,7 @@
 			y: -1,
 			transition: {
 				delay: 500,
-				duration: 1000,
+				duration: 500,
 			},
 		},
 	});

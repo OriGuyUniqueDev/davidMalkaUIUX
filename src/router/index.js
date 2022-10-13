@@ -11,16 +11,16 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
       meta:{
-        enterClass:'animate__animated animate__fadeInLeft',
-        leaveClass:'animate__animated animate__fadeOutRight',
+        enterClass:'animate__animated animate__fadeIn',
+        leaveClass:'animate__animated animate__fadeOut',
       },
     },
     {
       path: '/about',
       name: 'about',
       meta:{
-        enterClass:'animate__animated animate__fadeInRight',
-        leaveClass:'animate__animated animate__fadeOutLeft',
+        enterClass:'animate__animated animate__fadeIn',
+        leaveClass:'animate__animated animate__fadeOut',
         title:"David Malka - About"
       },
       component: AboutView
@@ -29,8 +29,8 @@ const router = createRouter({
       path: '/project:/:id',
       name: 'project',
       meta:{
-        enterClass:'animate__animated animate__fadeInRight',
-        leaveClass:'animate__animated animate__fadeOutLeft',
+        enterClass:'animate__animated animate__fadeIn',
+        leaveClass:'animate__animated animate__fadeOut',
         title:"Project"
       },
       props:true,
