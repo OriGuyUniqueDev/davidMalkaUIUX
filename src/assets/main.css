@@ -14,7 +14,7 @@ html {
 }
 body {
 	overflow-x: hidden;
-	background-color: #323232;
+	background-color:rgba(41, 41, 41, 1) ;
 }
 :root {
 	--animate-duration: 250ms;

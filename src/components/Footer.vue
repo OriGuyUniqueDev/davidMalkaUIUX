@@ -1,5 +1,6 @@
 <template>
-    <div class="flex flex-row bg-black justify-around lg:justify-around w-full
+    <hr class="bg-dividers h-[2px]">
+    <div class="flex flex-row bg-transparent justify-around lg:justify-around w-full
     h-[13rem]
     ">
         <div class="flexLeft flex flex-col text-greyText text-2xl gap-[1.2rem] lg:gap-[6rem] my-auto  lg:justify-around lg:flex-row">

@@ -1,7 +1,7 @@
 <template>
-    <div class=" mainWrapper text-greyText gap-3 py-6 text-white bg-black">
+    <div class=" mainWrapper text-greyText gap-3 py-6 text-white bg-transparent">
         <div class="text-xl  ">Developed by: </div>
-         <img class="w-[10rem] lg:w-[12rem]" src="@/assets/images/logo.png" alt="logo">
+         <img class="w-[8rem]  lg:w-[9rem]" src="@/assets/images/logo.png" alt="logo">
     </div>
 </template>
 
