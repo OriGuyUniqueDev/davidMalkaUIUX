@@ -382,4 +382,6 @@ Bells guides and provides financial advice to anyone interested, and provides th
 	<Developer></Developer>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

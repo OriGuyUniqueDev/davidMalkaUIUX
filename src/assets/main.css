@@ -16,3 +16,6 @@ body {
 	overflow-x: hidden;
 	background-color: #323232;
 }
+:root {
+	--animate-duration: 250ms;
+  }
