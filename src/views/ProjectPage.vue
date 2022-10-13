@@ -17,6 +17,10 @@
 			<div fieldName="slider" class="mb-[10.8rem]">
 				<Slider  :cards="data.fourthTitleDetails"></Slider>
 			</div>
+			<div fieldName="challenges" class="mb-[10.8rem]">
+				<h2 class="text-white text-bold mt-8 text-[3.2rem] mb-[2rem]">{{data.fifthTitle}}</h2>
+			
+			</div>
 			
 			
 		
