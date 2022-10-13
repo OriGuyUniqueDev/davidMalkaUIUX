@@ -42,7 +42,7 @@
 		visible: {
 			opacity: 1,
 			transition: {
-				duration: 1000
+				duration: 500
 			},
 		},
 	});
