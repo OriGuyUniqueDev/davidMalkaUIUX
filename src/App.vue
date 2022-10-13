@@ -14,6 +14,7 @@
 		{
 			projectName: "Pa’amonim",
 			bgColor: `bg-purple`,
+			color:'text-purple',
 			topImage: "/projectsImages/paamonim/topImage.png",
 			projectTitle: "About the project",
 			details: `Paamonim is a non-profit social organization.
@@ -50,14 +51,29 @@ Bells guides and provides financial advice to anyone interested, and provides th
 			],
 			fourthTitle: `Research & Users`,
 			fourthTitleDetails: [
-				{
+			{
 					number: `#1`,
 					title: `Managment economy`,
 					data: "most of users can’t follow after their money expands. ",
+					color:'text-purple'
 				},
 				{
 					number: `#2`,
-					title: `Simple users, specially old users, complicate with makeing budget every month.`,
+					title: 'Budget management',
+					data: `Simple users, specially old users, complicate with makeing budget every month.`,
+					color:'text-purple'
+				},
+				{
+					number: `#3`,
+					title: `Managment economy`,
+					data: "most of users can’t follow after their money expands. ",
+					color:'text-purple'
+				},
+				{
+					number: `#4`,
+					title: 'Budget management',
+					data: `Simple users, specially old users, complicate with makeing budget every month.`,
+					color:'text-purple'
 				},
 			],
 			fifthTitle: `Challenges`,
@@ -102,16 +118,31 @@ in the system`,
 construction area.`,
 				},
 			],
-			fourthTitle: `Research & Users`,
+			fourthTitle: `paint points`,
 			fourthTitleDetails: [
 				{
 					number: `#1`,
 					title: `Managment economy`,
 					data: "most of users can’t follow after their money expands. ",
+					color:'text-purple'
 				},
 				{
 					number: `#2`,
-					title: `Simple users, specially old users, complicate with makeing budget every month.`,
+					title: 'Budget management',
+					data: `Simple users, specially old users, complicate with makeing budget every month.`,
+					color:'text-purple'
+				},
+				{
+					number: `#3`,
+					title: `Managment economy`,
+					data: "most of users can’t follow after their money expands. ",
+					color:'text-purple'
+				},
+				{
+					number: `#4`,
+					title: 'Budget management',
+					data: `Simple users, specially old users, complicate with makeing budget every month.`,
+					color:'text-purple'
 				},
 			],
 			fifthTitle: `Challenges`,
