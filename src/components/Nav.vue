@@ -19,17 +19,17 @@
 	let show = ref(false);
 	let elementWidth = ref(null);
 	const { width } = useElementSize(elementWidth);
-	const motionInstance = useMotion(show, {
+	const motionInstance = useMotion(elementWidth, {
 		initial: {
 			opacity: 0,
 			y: -100,
 		},
-		visibleOnce: {
+		enter: {
 			opacity: 1,
 			y: -1,
 			transition: {
 				delay: 500,
-				duration: 1000,
+				duration: 500,
 			},
 		},
 	});

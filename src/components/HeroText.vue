@@ -21,7 +21,7 @@
 			opacity: 1,
 			x: 0,
 			transition: {
-				duration: 1000
+				duration: 800
 			},
 		},
 	});
