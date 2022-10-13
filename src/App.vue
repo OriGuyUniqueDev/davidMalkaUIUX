@@ -367,7 +367,6 @@ Bells guides and provides financial advice to anyone interested, and provides th
 			pic2: "../assets/images/projectsImages/paamonim/pic1.png",
 			pic3: "../assets/images/projectsImages/paamonim/pic2.png",
 		},
-      
 	];
 </script>
 
@@ -375,14 +374,12 @@ Bells guides and provides financial advice to anyone interested, and provides th
 	<Nav v-if="showNav"></Nav>
 	<ProjectNav v-else></ProjectNav>
 	<router-view :data="data.find((element) => element.projectName === route.params.id)" :id="route" v-slot="{ Component, route }">
-		<transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass">
+		<Transition mode="out-in"  :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass">
 			<component :is="Component" ref="showNav"></component>
-		</transition>
+		</Transition>
 	</router-view>
-	<Footer ></Footer>
-	<Developer ></Developer>
+	<Footer></Footer>
+	<Developer></Developer>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

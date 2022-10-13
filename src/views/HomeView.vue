@@ -4,11 +4,11 @@
 			<HeroText></HeroText>
 			<ProfilePic></ProfilePic>
 		</div>
+		<div class="text-white flex flex-col md:mx-auto pt-[12.8rem] w-full bg-black">
+			<HomepageCard v-for="card in cardsData" :key="card.title" :alt="card.alt" :title="card.title" :role="card.role" :url="card.url"></HomepageCard>
+		</div>
+		<HomepageHiddenComponent></HomepageHiddenComponent>
 	</div>
-	<div class="text-white flex flex-col md:mx-auto pt-[12.8rem] w-full bg-black">
-		<HomepageCard v-for="card in cardsData" :key="card.title" :alt="card.alt" :title="card.title" :role="card.role" :url="card.url"></HomepageCard>
-	</div>
-	<HomepageHiddenComponent></HomepageHiddenComponent>
 </template>
 
 <script setup>
