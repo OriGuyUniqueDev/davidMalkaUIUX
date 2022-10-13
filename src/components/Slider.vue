@@ -14,6 +14,7 @@ import SliderCard from "./SliderCard.vue";
 .mainWrapper {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
+    width: 100vw;
 }
 .mainWrapper::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
