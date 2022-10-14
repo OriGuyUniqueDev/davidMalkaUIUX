@@ -22,7 +22,7 @@
 	import HomepageHiddenComponent from "../components/HomepageHiddenComponent.vue";
 	const cardsData = [
 		{
-			title: "Pa’amonim",
+			title: "Paamonim",
 			role: "UI/UX Design",
 			url: paamonim,
 			alt: "Pa’amonim project pic",

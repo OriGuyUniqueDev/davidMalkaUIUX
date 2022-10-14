@@ -1,10 +1,10 @@
 <template>
-	<nav ref="elementWidth" class="flex justify-between bg-hoverStyle navBarContainer">
+	<nav  ref="elementWidth" class="flex justify-between bg-hoverStyle navBarContainer">
 		<div v-if="!show" class="flex flex-row gap-[1.95rem]">
 			<RouterLink :to="{name: 'home'}">
 				<img class="backArrow relative top-[0.8rem]" src="../assets/images/icons/backIcon.svg" alt="" />
 			</RouterLink>
-			<div class="logo">{{ logoTitle }}</div>
+			<div class="logo">{{ titleId }}</div>
 		</div>
 		<TransitionGroup name="slide">
 			<div v-if="show || width >= 833" key="wrapper" class="linkWrapper mobileOpen text-white flex">
@@ -21,8 +21,10 @@
 	import { useElementSize } from "@vueuse/core";
 	import { useMotion } from "@vueuse/motion";
 	import { useRoute } from "vue-router";
+	let props = defineProps(['titleId'])
 	const route = useRoute();
 	let show = ref(false);
+	let routeId = ref(route.params.id);
 	let elementWidth = ref(null);
 	const { width } = useElementSize(elementWidth);
 	const motionInstance = useMotion(elementWidth, {
@@ -39,7 +41,8 @@
 			},
 		},
 	});
-	let logoTitle = route.params.id;
+	let logoTitle = ref(route.params.id) ;
+
 </script>
 
 <style scoped>

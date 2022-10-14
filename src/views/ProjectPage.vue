@@ -8,7 +8,7 @@
 			</div>
 			<div fieldName="personas" class="mb-[10.8rem]">
 				<h2 class="text-white text-bold mt-8 text-[3.2rem] mb-[2rem]">{{ data.secondTitle }}</h2>
-				<Personas v-for="persona in data.secondTitleDetails" :icon="persona.icon" :data="persona.data"></Personas>
+				<Personas  v-for="persona in data.secondTitleDetails" :icon="persona.icon" :data="persona.data"></Personas>
 			</div>
 			<div fieldName="research" class="mb-[10.8rem] relative">
 				<h2 class="text-white text-bold mt-8 text-[3.2rem] mb-[2rem]">{{ data.thirdTitle }}</h2>
@@ -21,24 +21,28 @@
 				<h2 class="text-white mt-8 text-[3.2rem] mb-[2rem]">{{ data.fifthTitle }}</h2>
 				<Challenges v-for="challenge in data.fifthTitleDetails" :challengeData="challenge"></Challenges>
 			</div>
-			<div fieldName="bottom pic" class=" relative right-7 w-[100vw]">
-				<img class="w-[100vw]" :src="data.pic2" alt="">
-				<img class="relative w-[100vw]" :src="data.pic3" alt="">
+			<div fieldName="bottom pic" class="relative right-7 w-[100vw]">
+				<img class="w-[100vw]" :src="data.pic2" alt="" />
+				<img class="relative w-[100vw]" :src="data.pic3" alt="" />
 			</div>
-			<div fieldName="buttons" class="relative right-7 w-[100vw] ">
-				<div class=" flex flex-row justify-between bg-black px-[2.2rem] py-4 ">
-					<div class="btnWrapper flex flex-col gap-[1.5rem] w-40 ">
-						<p class="text-[1.4rem]">Previous project</p>
-						<button>
-							<img class="mx-auto" src="/icons/leftArrow.svg" alt="left arrow">
-						</button>
-					</div>
-					<div class="btnWrapper flex flex-col mr-6 gap-[1.5rem] w-40 ">
-						<p class="text-[1.4rem]">Previous project</p>
-						<button>
-							<img class="mx-auto" src="/icons/rightArrow.svg" alt="left arrow">
-						</button>
-					</div>
+			<div fieldName="buttons" class="relative right-7 w-[100vw]">
+				<div class="flex flex-row justify-between bg-black px-[2.2rem] py-4">
+					<RouterLink :to="{name:'project', params:{id:data.btnPre}}">
+						<div class="btnWrapper flex flex-col gap-[1.5rem] w-40">
+							<p class="text-[1.4rem]">Previous project</p>
+							<button>
+								<img class="mx-auto" src="/icons/leftArrow.svg" alt="left arrow" />
+							</button>
+						</div>
+					</RouterLink>
+					<RouterLink :to="{name:'project', params:{id:data.btnFor}}">
+						<div class="btnWrapper flex flex-col mr-6 gap-[1.5rem] w-40">
+							<p class="text-[1.4rem]">Next project</p>
+							<button>
+								<img class="mx-auto" src="/icons/rightArrow.svg" alt="left arrow" />
+							</button>
+						</div>
+					</RouterLink>
 				</div>
 			</div>
 		</div>
@@ -51,9 +55,17 @@
 	import ResearchComponent from "../components/ResearchComponent.vue";
 	import Slider from "../components/Slider.vue";
 	import Challenges from "../components/Challenges.vue";
+import { onUpdated } from "vue";
+
 
 	let props = defineProps(["id", "data"]);
-	console.log(props.data.pic2);
+	const emit = defineEmits(['updateNav'])
+	console.log(props.data);
+	onUpdated(()=>{
+		console.log('Updated');
+		emit('updateNav',props.id)
+		
+	})
 </script>
 
 <style scoped>

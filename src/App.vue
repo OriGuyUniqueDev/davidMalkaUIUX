@@ -2,17 +2,22 @@
 	import Nav from "./components/Nav.vue";
 	import Footer from "./components/Footer.vue";
 	import Developer from "./components/Developer.vue";
-	import { ref, watch } from "vue";
+	import { onUpdated, ref, watch } from "vue";
 	import { useRouter, useRoute } from "vue-router";
 	import ProjectNav from "./components/ProjectNav.vue";
 	const route = useRoute();
+
+	let titleId = ref(route.params.id)
+	onUpdated(() => {
+		titleId.value = route.params.id
+	})
 	let showNav = ref(false);
 	watch(showNav, () => {
 		route.name !== "project" ? (showNav.value = true) : (showNav.value = false);
 	});
 	let data = [
 		{
-			projectName: "Pa’amonim",
+			projectName: "Paamonim",
 			bgColor: `bg-purple`,
 			color:'text-purple',
 			topImage: "/projectsImages/paamonim/topImage.png",
@@ -96,6 +101,8 @@ Bells guides and provides financial advice to anyone interested, and provides th
 			],
 			pic2: "/projectsImages/paamonim/pic1.png",
 			pic3: "/projectsImages/paamonim/pic2.png",
+			btnPre:'Abra Web & Mobile',
+			btnFor: 'Ram Aderet'
 		},
 		{
 			projectName: "Ram Aderet",
@@ -169,14 +176,167 @@ construction area.`,
 			],
 			pic2: "/projectsImages/paamonim/pic1.png",
 			pic3: "/projectsImages/paamonim/pic2.png",
+			btnPre:'Paamonim',
+			btnFor: 'Patricia'
 		},
+		{
+			projectName: "Abra Web & Mobile",
+			bgColor: `bg-yellow`,
+			topImage: "/projectsImages/ramAderet/topImage.png",
+			projectTitle: "About the project",
+			details: `The company is involved in the initiation and execution of the leading and sought-after residential areas and neighborhoods in Israel. Responsible for the construction of some of the most important architectural icons and public buildings erected in recent years. The system is an internal corporate SAP system designed to help Ram Adrat user׳s manage the organization.`,
+			thirdTitle: `Research & Users`,
+			thirdTitleDetails: [
+				{
+					icon: `70%`,
+					data: `Of users are not technology
+personas. `,
+				},
+				{
+					icon: `20%`,
+					data: `Of users want to be monitored
+for the actions of different users
+in the system`,
+				},
+				{
+					icon: `10%`,
+					data: `Of users working in
+construction area.`,
+				},
+			],
+			fourthTitle: `paint points`,
+			fourthTitleDetails: [
+				{
+					number: `#1`,
+					title: `Managment economy`,
+					data: "most of users can’t follow after their money expands. ",
+					color:'text-purple'
+				},
+				{
+					number: `#2`,
+					title: 'Budget management',
+					data: `Simple users, specially old users, complicate with makeing budget every month.`,
+					color:'text-purple'
+				},
+				{
+					number: `#3`,
+					title: `Managment economy`,
+					data: "most of users can’t follow after their money expands. ",
+					color:'text-purple'
+				},
+				{
+					number: `#4`,
+					title: 'Budget management',
+					data: `Simple users, specially old users, complicate with makeing budget every month.`,
+					color:'text-purple'
+				},
+			],
+			fifthTitle: `Challenges`,
+			fifthTitleDetails: [
+				{
+					title: ` abra - Make It Simple`,
+					paraData: {
+						data1: `Apps of this kind for the most part are complicated with lots of information, the challenge was to create something a little more experiential, fun and easy to use.`,
+						data2: `Use of illustrations and pastel colors. I’ve tried to create a nice copywriting that speaks to simple users.`,
+					}
+				},
+				{
+					title: `abra - Use it fast`,
+					paraData:{
+						data1: `In an app of this type, there is a lot of data that needs to be entered specifically from the user's side. One of the challenges was to create a template that would be quick and easy to use`,
+						data2: `One of the solution was create layers templates (toast).
+					Those templates are make the fast experiance, enter information easily and always indicate the users where they are during using the app, and let them returning without unnecessary screen transitions.`,
+					}
+				},
+			],
+			pic2: "/projectsImages/paamonim/pic1.png",
+			pic3: "/projectsImages/paamonim/pic2.png",
+			btnPre:'Patricia',
+			btnFor: 'Paamonim'
+		},
+		{
+			projectName: "Patricia",
+			bgColor: `bg-red`,
+			topImage: "/projectsImages/ramAderet/topImage.png",
+			projectTitle: "About the project",
+			details: `The company is involved in the initiation and execution of the leading and sought-after residential areas and neighborhoods in Israel. Responsible for the construction of some of the most important architectural icons and public buildings erected in recent years. The system is an internal corporate SAP system designed to help Ram Adrat user׳s manage the organization.`,
+			thirdTitle: `Research & Users`,
+			thirdTitleDetails: [
+				{
+					icon: `70%`,
+					data: `Of users are not technology
+personas. `,
+				},
+				{
+					icon: `20%`,
+					data: `Of users want to be monitored
+for the actions of different users
+in the system`,
+				},
+				{
+					icon: `10%`,
+					data: `Of users working in
+construction area.`,
+				},
+			],
+			fourthTitle: `paint points`,
+			fourthTitleDetails: [
+				{
+					number: `#1`,
+					title: `Managment economy`,
+					data: "most of users can’t follow after their money expands. ",
+					color:'text-purple'
+				},
+				{
+					number: `#2`,
+					title: 'Budget management',
+					data: `Simple users, specially old users, complicate with makeing budget every month.`,
+					color:'text-purple'
+				},
+				{
+					number: `#3`,
+					title: `Managment economy`,
+					data: "most of users can’t follow after their money expands. ",
+					color:'text-purple'
+				},
+				{
+					number: `#4`,
+					title: 'Budget management',
+					data: `Simple users, specially old users, complicate with makeing budget every month.`,
+					color:'text-purple'
+				},
+			],
+			fifthTitle: `Challenges`,
+			fifthTitleDetails: [
+				{
+					title: ` Patricia - Make It Simple`,
+					paraData: {
+						data1: `Apps of this kind for the most part are complicated with lots of information, the challenge was to create something a little more experiential, fun and easy to use.`,
+						data2: `Use of illustrations and pastel colors. I’ve tried to create a nice copywriting that speaks to simple users.`,
+					}
+				},
+				{
+					title: `Patricia - Use it fast`,
+					paraData:{
+						data1: `In an app of this type, there is a lot of data that needs to be entered specifically from the user's side. One of the challenges was to create a template that would be quick and easy to use`,
+						data2: `One of the solution was create layers templates (toast).
+					Those templates are make the fast experiance, enter information easily and always indicate the users where they are during using the app, and let them returning without unnecessary screen transitions.`,
+					}
+				},
+			],
+			pic2: "/projectsImages/paamonim/pic1.png",
+			pic3: "/projectsImages/paamonim/pic2.png",
+			btnPre:'Ram Aderet',
+			btnFor: 'Abra Web & Mobile'
+		},
+		
 	];
 </script>
 
 <template>
 	<Nav v-if="showNav"></Nav>
-	<ProjectNav v-else></ProjectNav>
-	<router-view :data="data.find((element) => element.projectName === route.params.id)" :id="route" v-slot="{ Component, route }">
+	<ProjectNav :titleId="titleId" v-else></ProjectNav>
+	<router-view ref="routeId" :data="data.find((element) => element.projectName === route.params.id)" :id="route" v-slot="{ Component, route }">
 		<Transition mode="out-in" :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass">
 			<component :is="Component" ref="showNav"></component>
 		</Transition>
