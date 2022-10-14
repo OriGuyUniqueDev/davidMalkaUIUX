@@ -36,8 +36,8 @@
 						</div>
 					</RouterLink>
 					<RouterLink :to="{name:'project', params:{id:data.btnFor}}">
-						<div class="btnWrapper flex flex-col mr-6 gap-[1.5rem] w-40">
-							<p class="text-[1.4rem]">Next project</p>
+						<div class="btnWrapper flex flex-col gap-[1.5rem] w-40">
+							<p class="text-[1.4rem] mx-auto">Next project</p>
 							<button>
 								<img class="mx-auto" src="/icons/rightArrow.svg" alt="left arrow" />
 							</button>
@@ -56,6 +56,9 @@
 	import Slider from "../components/Slider.vue";
 	import Challenges from "../components/Challenges.vue";
 import { onUpdated } from "vue";
+import { useRouter } from 'vue-router'
+const router = useRouter()
+console.log(router);
 
 
 	let props = defineProps(["id", "data"]);

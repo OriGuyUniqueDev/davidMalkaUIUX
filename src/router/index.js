@@ -36,7 +36,18 @@ const router = createRouter({
       props:true,
       component: ProjectPage
     },
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll 10px above the element #main
+    return {
+      // could also be
+      // el: document.getElementById('main'),
+      el: '#app',
+      top: 0,
+      behavior: 'smooth',
+    }
+  },
+  
 })
 
 router.afterEach((to,from) => {
