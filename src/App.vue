@@ -79,19 +79,23 @@ Bells guides and provides financial advice to anyone interested, and provides th
 			fifthTitle: `Challenges`,
 			fifthTitleDetails: [
 				{
-					title: `Make It Simple`,
-					data1: `Apps of this kind for the most part are complicated with lots of information, the challenge was to create something a little more experiential, fun and easy to use.`,
-					data2: `Use of illustrations and pastel colors. I’ve tried to create a nice copywriting that speaks to simple users.`,
+					title: `🔔 Make It Simple`,
+					paraData:{
+						data1: `Apps of this kind for the most part are complicated with lots of information, the challenge was to create something a little more experiential, fun and easy to use.`,
+						data2: `Use of illustrations and pastel colors. I’ve tried to create a nice copywriting that speaks to simple users.`
+					}
 				},
 				{
-					title: `Use it fast`,
-					data1: `In an app of this type, there is a lot of data that needs to be entered specifically from the user's side. One of the challenges was to create a template that would be quick and easy to use`,
-					data2: `One of the solution was create layers templates (toast).
-                Those templates are make the fast experiance, enter information easily and always indicate the users where they are during using the app, and let them returning without unnecessary screen transitions.`,
+					title: `🔔 Use it fast`,
+					paraData:{
+						data1: `In an app of this type, there is a lot of data that needs to be entered specifically from the user's side. One of the challenges was to create a template that would be quick and easy to use`,
+						data2: `One of the solution was create layers templates (toast).
+					Those templates are make the fast experiance, enter information easily and always indicate the users where they are during using the app, and let them returning without unnecessary screen transitions.`
+					}
 				},
 			],
-			pic2: "../assets/images/projectsImages/paamonim/pic1.png",
-			pic3: "../assets/images/projectsImages/paamonim/pic2.png",
+			pic2: "/projectsImages/paamonim/pic1.png",
+			pic3: "/projectsImages/paamonim/pic2.png",
 		},
 		{
 			projectName: "Ram Aderet",
@@ -148,19 +152,23 @@ construction area.`,
 			fifthTitle: `Challenges`,
 			fifthTitleDetails: [
 				{
-					title: `Make It Simple`,
-					data1: `Apps of this kind for the most part are complicated with lots of information, the challenge was to create something a little more experiential, fun and easy to use.`,
-					data2: `Use of illustrations and pastel colors. I’ve tried to create a nice copywriting that speaks to simple users.`,
+					title: ` ram - Make It Simple`,
+					paraData: {
+						data1: `Apps of this kind for the most part are complicated with lots of information, the challenge was to create something a little more experiential, fun and easy to use.`,
+						data2: `Use of illustrations and pastel colors. I’ve tried to create a nice copywriting that speaks to simple users.`,
+					}
 				},
 				{
-					title: `Use it fast`,
-					data1: `In an app of this type, there is a lot of data that needs to be entered specifically from the user's side. One of the challenges was to create a template that would be quick and easy to use`,
-					data2: `One of the solution was create layers templates (toast).
-                Those templates are make the fast experiance, enter information easily and always indicate the users where they are during using the app, and let them returning without unnecessary screen transitions.`,
+					title: `ram - Use it fast`,
+					paraData:{
+						data1: `In an app of this type, there is a lot of data that needs to be entered specifically from the user's side. One of the challenges was to create a template that would be quick and easy to use`,
+						data2: `One of the solution was create layers templates (toast).
+					Those templates are make the fast experiance, enter information easily and always indicate the users where they are during using the app, and let them returning without unnecessary screen transitions.`,
+					}
 				},
 			],
-			pic2: "../assets/images/projectsImages/paamonim/pic1.png",
-			pic3: "../assets/images/projectsImages/paamonim/pic2.png",
+			pic2: "/projectsImages/paamonim/pic1.png",
+			pic3: "/projectsImages/paamonim/pic2.png",
 		},
 	];
 </script>

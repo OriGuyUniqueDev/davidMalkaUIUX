@@ -15,15 +15,32 @@
 				<ResearchComponent v-for="card in data.thirdTitleDetails" :icon="card.icon" :data="card.data"></ResearchComponent>
 			</div>
 			<div fieldName="slider" class="mb-[10.8rem]">
-				<Slider  :cards="data.fourthTitleDetails"></Slider>
+				<Slider :cards="data.fourthTitleDetails"></Slider>
 			</div>
 			<div fieldName="challenges" class="mb-[10.8rem]">
-				<h2 class="text-white text-bold mt-8 text-[3.2rem] mb-[2rem]">{{data.fifthTitle}}</h2>
-			
+				<h2 class="text-white mt-8 text-[3.2rem] mb-[2rem]">{{ data.fifthTitle }}</h2>
+				<Challenges v-for="challenge in data.fifthTitleDetails" :challengeData="challenge"></Challenges>
 			</div>
-			
-			
-		
+			<div fieldName="bottom pic" class=" relative right-7 w-[100vw]">
+				<img class="w-[100vw]" :src="data.pic2" alt="">
+				<img class="relative w-[100vw]" :src="data.pic3" alt="">
+			</div>
+			<div fieldName="buttons" class="relative right-7 w-[100vw] ">
+				<div class=" flex flex-row justify-between bg-black px-[2.2rem] py-4 ">
+					<div class="btnWrapper flex flex-col gap-[1.5rem] w-40 ">
+						<p class="text-[1.4rem]">Previous project</p>
+						<button>
+							<img class="mx-auto" src="/icons/leftArrow.svg" alt="left arrow">
+						</button>
+					</div>
+					<div class="btnWrapper flex flex-col mr-6 gap-[1.5rem] w-40 ">
+						<p class="text-[1.4rem]">Previous project</p>
+						<button>
+							<img class="mx-auto" src="/icons/rightArrow.svg" alt="left arrow">
+						</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -32,11 +49,11 @@
 	import ProjectHero from "../components/ProjectHero.vue";
 	import Personas from "../components/Personas.vue";
 	import ResearchComponent from "../components/ResearchComponent.vue";
-import Slider from "../components/Slider.vue";
-	
-
+	import Slider from "../components/Slider.vue";
+	import Challenges from "../components/Challenges.vue";
 
 	let props = defineProps(["id", "data"]);
+	console.log(props.data.pic2);
 </script>
 
 <style scoped>
@@ -44,6 +61,7 @@ import Slider from "../components/Slider.vue";
 	h2 {
 		color: white;
 		font-family: "Playfair Display";
+		font-weight: 900;
 	}
 	p {
 		color: white;
