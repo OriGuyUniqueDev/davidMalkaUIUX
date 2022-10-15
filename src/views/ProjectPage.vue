@@ -8,7 +8,7 @@
 			</div>
 			<div fieldName="personas" class="mb-[10.8rem]">
 				<h2 class="text-white text-bold mt-8 text-[3.2rem] mb-[2rem]">{{ data.secondTitle }}</h2>
-				<Personas  v-for="persona in data.secondTitleDetails" :icon="persona.icon" :data="persona.data"></Personas>
+				<Personas v-for="persona in data.secondTitleDetails" :icon="persona.icon" :data="persona.data"></Personas>
 			</div>
 			<div fieldName="research" class="mb-[10.8rem] relative">
 				<h2 class="text-white text-bold mt-8 text-[3.2rem] mb-[2rem]">{{ data.thirdTitle }}</h2>
@@ -27,7 +27,7 @@
 			</div>
 			<div fieldName="buttons" class="relative right-7 w-[100vw]">
 				<div class="flex flex-row justify-between bg-black px-[2.2rem] py-4">
-					<RouterLink :to="{name:'project', params:{id:data.btnPre}}">
+					<RouterLink :to="{ name: 'project', params: { id: data.btnPre } }">
 						<div class="btnWrapper flex flex-col gap-[1.5rem] w-40">
 							<p class="text-[1.4rem]">Previous project</p>
 							<button>
@@ -35,7 +35,7 @@
 							</button>
 						</div>
 					</RouterLink>
-					<RouterLink :to="{name:'project', params:{id:data.btnFor}}">
+					<RouterLink :to="{ name: 'project', params: { id: data.btnFor } }">
 						<div class="btnWrapper flex flex-col gap-[1.5rem] w-40">
 							<p class="text-[1.4rem] mx-auto">Next project</p>
 							<button>
@@ -55,20 +55,16 @@
 	import ResearchComponent from "../components/ResearchComponent.vue";
 	import Slider from "../components/Slider.vue";
 	import Challenges from "../components/Challenges.vue";
-import { onUpdated } from "vue";
-import { useRouter } from 'vue-router'
-const router = useRouter()
-console.log(router);
-
+	import { onUpdated } from "vue";
+	import { useRouter } from "vue-router";
+	const router = useRouter();
 
 	let props = defineProps(["id", "data"]);
-	const emit = defineEmits(['updateNav'])
-	console.log(props.data);
-	onUpdated(()=>{
-		console.log('Updated');
-		emit('updateNav',props.id)
-		
-	})
+	const emit = defineEmits(["updateNav"]);
+
+	onUpdated(() => {
+		emit("updateNav", props.id);
+	});
 </script>
 
 <style scoped>

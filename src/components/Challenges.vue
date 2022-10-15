@@ -4,13 +4,12 @@
 
 		<p class="text-[1.6rem] my-[0.9rem]">{{ challengeData.paraData.data1 }}</p>
 		<img class="w-[5rem] my-8" src="/icons/arrowDown.svg" alt="" />
-        <p class="text-[1.6rem] mb-[6.7rem] my-[0.9rem]">{{ challengeData.paraData.data2 }}</p>
+		<p class="text-[1.6rem] mb-[6.7rem] my-[0.9rem]">{{ challengeData.paraData.data2 }}</p>
 	</div>
 </template>
 
 <script setup>
 	let props = defineProps(["challengeData"]);
-	console.log(props.challengeData);
 </script>
 
 <style scoped>
