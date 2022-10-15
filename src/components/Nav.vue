@@ -106,5 +106,6 @@
 		line-height: 2.268rem;
 		letter-spacing: 5%;
 		z-index: 999;
+		top: 1px;
 	}
 </style>
