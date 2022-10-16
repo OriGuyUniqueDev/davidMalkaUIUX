@@ -21,16 +21,19 @@
 				<h2 class="text-white mt-8 text-[3.2rem] mb-[2rem]">{{ data.fifthTitle }}</h2>
 				<Challenges v-for="challenge in data.fifthTitleDetails" :challengeData="challenge"></Challenges>
 			</div>
-			<div fieldName="bottom pic" class="flex flex-col   align-middle w-[100vw]">
+			<div fieldName="bottom pic" class="flex flex-col md:-ml-[13.8rem] xl:-ml-[21.8rem] w-[100vw]">
 				<img class="
-				w-[100%] scale-150 my-20
-				
+				w-[100%] scale-125 my-20
+				md:scale-x-125 
+				xl:scale-[1]
 				" :src="data.pic2" alt="" />
 				<img class="
-				w-[42.9rem] scale-x-125 my-0 mx-auto
+				w-[42.9rem] scale-x-105 my-0 mx-auto
+				md:w-[91.5rem] md:scale-x-100
+			
 				" :src="data.pic3" alt="" />
 			</div>
-			<div fieldName="buttons" class="relative -ml-[1.8rem] lg:-ml-[21.8rem] w-[100vw]">
+			<div fieldName="buttons" class="relative -ml-[1.8rem] md:-ml-[13.8rem] xl:-ml-[21.8rem] w-[100vw]">
 				<div class="flex flex-row justify-between md:justify-evenly md:gap-128 bg-black px-[2.2rem] py-4">
 					<RouterLink :to="{ name: 'project', params: { id: data.btnPre } }">
 						<div class="btnWrapper flex flex-col gap-[1.5rem] w-40">
