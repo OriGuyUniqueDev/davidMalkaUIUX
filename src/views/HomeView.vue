@@ -1,5 +1,5 @@
 <template>
-	<div class="overflow-x-hidden">
+	<div >
 		<div class="mainWrapper h-[58.5rem] bg-hoverStyle flex md:justify-around xl:justify-center xl:gap-80">
 			<HeroText></HeroText>
 			<ProfilePic></ProfilePic>
