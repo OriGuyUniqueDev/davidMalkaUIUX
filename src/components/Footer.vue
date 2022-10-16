@@ -4,7 +4,10 @@
     h-[13rem]
     ">
         <div class="flexLeft flex flex-col text-greyText text-2xl gap-[1.2rem] lg:gap-[6rem] my-auto  lg:justify-around lg:flex-row">
-            <p class="logo"><span class="font-bold">David</span>Malka</p>
+            <RouterLink :to="{name:'home'}">
+                <p class="logo"><span class="font-bold">David</span>Malka</p>
+            </RouterLink>
+            
             <a class="lg:leading-[2.3rem]" href="mailto:dudu5malka@gmail.com">dudu5malka@gmail.com</a>
             <a class="lg:leading-[2.3rem]" href="tel:+972547951888">+972547951888</a>
         </div>
