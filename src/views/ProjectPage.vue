@@ -1,6 +1,6 @@
 <template>
-	<div class="w-full overflow-x-hidden">
-		<ProjectHero :bgColor1="data.bgColor" :topImage="data.topImage"></ProjectHero>
+	<div class="w-full overflow-x-hidden ">
+		<ProjectHero  :bgColor1="data.bgColor" :topImage="data.topImage"></ProjectHero>
 		<div class="px-[1.8rem] md:mx-[12rem] xl:mx-[20rem]">
 			<div fieldName="about" class="mb-20">
 				<h1 class="text-bold mt-8 text-[3.2rem]">{{ data.projectTitle }}</h1>
