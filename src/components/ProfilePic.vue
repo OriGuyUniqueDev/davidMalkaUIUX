@@ -5,7 +5,7 @@
         sm:w-[60rem] sm:h-[57.6rem] sm:left-0 
         md:w-[72.1rem] md:h-[69.2rem]
         " 
-        src="@/assets/images/profilePic.png" alt="profile picture" />
+        src="@/assets/images/profilePic.webp" alt="profile picture" />
 	</div>
 </template>
 
