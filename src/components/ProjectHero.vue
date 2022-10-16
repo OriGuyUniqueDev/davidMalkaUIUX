@@ -13,7 +13,7 @@
 <style  scoped>
     .mainWrapper{
         position: relative;
-        top: -6.3rem;
+        top: -7rem;
        
     }
   

@@ -1,5 +1,5 @@
 <template>
-	<nav  ref="elementWidth" class=" flex flex-row justify-between bg-hoverStyle navBarContainer">
+	<nav  ref="elementWidth" class=" flex flex-row justify-between py-10 bg-hoverStyle navBarContainer">
 		<div v-if="!show" class="flex  gap-[1.95rem]">
 			<RouterLink :to="{name: 'home'}">
 				<img class="backArrow relative top-[0.8rem]" src="../assets/images/icons/backIcon.svg" alt="" />
@@ -112,8 +112,6 @@
 		/* padding: 3.7rem 1.6rem; */
 		background-color: transparent;
 		margin-inline: 1.6rem;
-		display: grid;
-		align-items: center;
 		height: 6.3rem;
 		position: relative;
 		font-family: "Outfit", sans-serif;
