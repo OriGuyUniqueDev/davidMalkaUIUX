@@ -1,29 +1,19 @@
 <template>
-	<div   ref="elementWidth"  class=" mainWrapper md:w-[80rem] md:mx-auto   flex flex-col mx-4 mb-8 lg:flex-row  lg:h-[40rem] lg:w-[128rem] lg:mb-[8.8rem] lg:gap-[14.7rem]">
-		<RouterLink :to="{ name: 'project', params: {id: title} }">
-			<img  :src="url" :alt="alt" class="hover:scale-105
-			md:w-[80rem] md:h-[40rem]
-			lg:w-[56.4rem] 
-			2xl:w-[69rem]
-			"/>
-		</RouterLink>
-		<div class="textButtonWrapper flex justify-between lg:flex-col lg:justify-evenly my-4 ">
-			<div>
-				<h1 class="text-[900]
-				text-[4.8rem] leading-[6.398rem]"
-				>{{ title }}</h1>
-				<h2 class="text-greyText
-				text-[3.2rem] leading-[4.032rem]
-				">{{ role }}</h2>
+	<div ref="elementWidth" class="mainWrapper md:w-[80rem] md:mx-auto flex flex-col mx-4 mb-8 lg:flex-row lg:h-[40rem] lg:w-[128rem] lg:mb-[8.8rem] lg:gap-[14.7rem]">
+		<RouterLink :to="{ name: 'project', params: { id: title } }">
+			<div class="w-full">
+				<h2 class="absolute p-[1.8rem] titleToHide bg-black opacity-95 rounded-xl text-center z-10 text-5xl mx-auto hover:opacity-100 :">Click To See The Project 👆🏼</h2>
+				<img :src="url" :alt="alt" class="relative hover:opacity-80 md:w-[80rem] md:h-[40rem] lg:w-[56.4rem] 2xl:w-[69rem]" />
 			</div>
-			<RouterLink :to="{ name: 'project', params: {id: title} }">
-				<button v-if="width >= 550" type="button" class="
-				self-center
-				w-[14.6rem] h-[4.5rem]
-				lg:self-start
-					">View project</button>
+		</RouterLink>
+		<div class="textButtonWrapper flex justify-between lg:flex-col lg:justify-evenly my-4">
+			<div>
+				<h1 class="text-[900] text-[4.8rem] leading-[6.398rem]">{{ title }}</h1>
+				<h2 class="text-greyText text-[3.2rem] leading-[4.032rem]">{{ role }}</h2>
+			</div>
+			<RouterLink :to="{ name: 'project', params: { id: title } }">
+				<button v-if="width >= 550" type="button" class="self-center w-[14.6rem] h-[4.5rem] lg:self-start">View project</button>
 			</RouterLink>
-				
 		</div>
 	</div>
 </template>
@@ -42,19 +32,28 @@
 		visible: {
 			opacity: 1,
 			transition: {
-				duration: 500
+				duration: 500,
 			},
 		},
 	});
 </script>
 
 <style scoped>
+	/* .titleToHide {
+		display: none;
+	} */
+	 div > .titleToHide{
+		display: none;
+	 }
+
+	 div:hover > .titleToHide {
+		display: block;
+	}
 	img {
 		transition: all 0.375s linear;
 	}
 	h1 {
 		font-family: "Playfair Display", serif;
-		
 	}
 	h2 {
 		font-family: "Outfit", sans-serif;
@@ -67,6 +66,9 @@
 		position: relative;
 		border-radius: 999px;
 		z-index: 6;
+		transition: 0.3s all ease-out;
+	}
+	div {
 		transition: 0.3s all ease-out;
 	}
 	button::before {
