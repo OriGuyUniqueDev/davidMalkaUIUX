@@ -17,17 +17,17 @@
 			<div fieldName="slider" class="mb-[10.8rem]">
 				<Slider :cards="data.fourthTitleDetails"></Slider>
 			</div>
-			<div fieldName="challenges" class="mb-[10.8rem] xl:flex xl:flex-col">
+			<div fieldName="challenges" class="mb-[5rem] xl:flex xl:flex-col">
 				<h2 class="text-white mt-8 text-[3.2rem] mb-[2rem]">{{ data.fifthTitle }}</h2>
 				<Challenges v-for="challenge in data.fifthTitleDetails" :challengeData="challenge"></Challenges>
 			</div>
 			<div fieldName="bottom pic" class="flex flex-col justify-center w-[100vw]">
 				<img class="
-				w-[100%] scale-x-125 -mt-16
+				w-[100%] scale-150 my-20
 				
 				" :src="data.pic2" alt="" />
 				<img class="
-				w-[42.9rem] scale-x-125
+				w-[42.9rem]
 				" :src="data.pic3" alt="" />
 			</div>
 			<div fieldName="buttons" class="relative -ml-[1.8rem] lg:-ml-[21.8rem] w-[100vw]">
