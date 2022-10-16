@@ -7,7 +7,7 @@
 			<div class="logo">{{ titleId }}</div>
 		</div>
 		<TransitionGroup name="slide">
-			<div v-if="show || width >= 750" key="wrapper" class="linkWrapper mobileOpen  text-white flex">
+			<div v-if="show || width >= 800" key="wrapper" class="linkWrapper mobileOpen  text-white flex">
 				<RouterLink key="home" class="mr-4" :to="{ name: 'home' }">Home</RouterLink>
 				<RouterLink key="about" :to="{ name: 'about' }">About</RouterLink>
 			</div>
