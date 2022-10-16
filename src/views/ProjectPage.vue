@@ -15,6 +15,7 @@
 				<ResearchComponent v-for="card in data.thirdTitleDetails" :icon="card.icon" :data="card.data"></ResearchComponent>
 			</div>
 			<div fieldName="slider" class="mb-[10.8rem]">
+				<h2 class="text-white text-bold mt-8 text-[3.2rem] mb-[2rem]">Paint Points</h2>
 				<Slider :cards="data.fourthTitleDetails"></Slider>
 			</div>
 			<div fieldName="challenges" class="mb-[5rem] xl:flex xl:flex-col">
