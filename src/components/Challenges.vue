@@ -1,10 +1,13 @@
 <template>
-	<div class="mainWrapper">
-		<h2 class="text-3xl mt-[2rem]">{{ challengeData.title }}</h2>
+	<div class="mainWrapper w-full">
+		<h2 class="text-3xl mt-[4.8rem] mb-[1rem]">{{ challengeData.title }}</h2>
 
-		<p class="text-[1.6rem] my-[0.9rem]">{{ challengeData.paraData.data1 }}</p>
-		<img class="w-[5rem] my-8" src="/icons/arrowDown.svg" alt="" />
-		<p class="text-[1.6rem] mb-[6.7rem] my-[0.9rem]">{{ challengeData.paraData.data2 }}</p>
+		<div class=" xl:flex gap-72  ">
+			<p class="text-[1.6rem] my-[0.9rem] xl:w-[50rem]">{{ challengeData.paraData.data1 }}</p>
+			<img class="w-[5rem] my-16 md:mx-auto xl:-rotate-90 relative  xl:my-0 xl:self-start" src="/icons/arrowDown.svg" alt="" />
+			<p class="text-[1.6rem] mb-[6.7rem] my-[0.9rem] xl:w-[30rem]">{{ challengeData.paraData.data2 }}</p>
+			<hr class="h-[1px] bg-dividers">
+		</div>
 	</div>
 </template>
 

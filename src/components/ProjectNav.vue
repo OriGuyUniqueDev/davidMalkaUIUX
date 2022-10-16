@@ -1,13 +1,13 @@
 <template>
-	<nav  ref="elementWidth" class="flex justify-between bg-hoverStyle navBarContainer">
-		<div v-if="!show" class="flex flex-row gap-[1.95rem]">
+	<nav  ref="elementWidth" class=" flex flex-row justify-between bg-hoverStyle navBarContainer">
+		<div v-if="!show" class="flex  gap-[1.95rem]">
 			<RouterLink :to="{name: 'home'}">
 				<img class="backArrow relative top-[0.8rem]" src="../assets/images/icons/backIcon.svg" alt="" />
 			</RouterLink>
 			<div class="logo">{{ titleId }}</div>
 		</div>
 		<TransitionGroup name="slide">
-			<div v-if="show || width >= 833" key="wrapper" class="linkWrapper mobileOpen text-white flex">
+			<div v-if="show || width >= 750" key="wrapper" class="linkWrapper mobileOpen  text-white flex">
 				<RouterLink key="home" class="mr-4" :to="{ name: 'home' }">Home</RouterLink>
 				<RouterLink key="about" :to="{ name: 'about' }">About</RouterLink>
 			</div>
