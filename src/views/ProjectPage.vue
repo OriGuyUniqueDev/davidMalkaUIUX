@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full">
+	<div class="w-full overflow-x-hidden">
 		<ProjectHero :bgColor1="data.bgColor" :topImage="data.topImage"></ProjectHero>
 		<div class="px-[1.8rem] md:mx-[12rem] xl:mx-[20rem]">
 			<div fieldName="about" class="mb-20">
@@ -21,13 +21,13 @@
 				<h2 class="text-white mt-8 text-[3.2rem] mb-[2rem]">{{ data.fifthTitle }}</h2>
 				<Challenges v-for="challenge in data.fifthTitleDetails" :challengeData="challenge"></Challenges>
 			</div>
-			<div fieldName="bottom pic" class="flex flex-col justify-center w-[100vw]">
+			<div fieldName="bottom pic" class="flex flex-col mx-auto justify-center w-[100vw]">
 				<img class="
 				w-[100%] scale-150 my-20
 				
 				" :src="data.pic2" alt="" />
 				<img class="
-				w-[42.9rem]
+				w-[42.9rem] scale-x-105 -ml-8
 				" :src="data.pic3" alt="" />
 			</div>
 			<div fieldName="buttons" class="relative -ml-[1.8rem] lg:-ml-[21.8rem] w-[100vw]">
