@@ -4,7 +4,7 @@
 		<div class="px-[1.8rem] md:mx-[12rem] xl:mx-[20rem]">
 			<div fieldName="about" class="mb-20">
 				<h1 class="text-bold mt-8 text-[3.2rem]">{{ data.projectTitle }}</h1>
-				<p class="text-[1.6rem]">{{ data.details }}</p>
+				<p class="text-[1.6rem] lg:w-[50%]">{{ data.details }}</p>
 			</div>
 			<div fieldName="personas" class="mb-[10.8rem]">
 				<h2 class="text-white text-bold mt-8 text-[3.2rem] mb-[2rem]">{{ data.secondTitle }}</h2>
@@ -18,7 +18,7 @@
 				<h2 class="text-white text-bold mt-8 text-[3.2rem] mb-[2rem]">Paint Points</h2>
 				<Slider :cards="data.fourthTitleDetails"></Slider>
 			</div>
-			<div fieldName="challenges" class="mb-[5rem] xl:flex xl:flex-col">
+			<div fieldName="challenges" class="mb-[5rem] lg:w-[50%] xl:flex xl:flex-col">
 				<h2 class="text-white mt-8 text-[3.2rem] mb-[2rem]">{{ data.fifthTitle }}</h2>
 				<Challenges v-for="challenge in data.fifthTitleDetails" :challengeData="challenge"></Challenges>
 			</div>
