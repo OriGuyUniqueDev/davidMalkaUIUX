@@ -1,5 +1,5 @@
 <template>
-	<nav ref="elementWidth" class="flex justify-between bg-hoverStyle navBarContainer">
+	<nav ref="elementWidth" class="flex lg:px-[12rem] justify-between bg-hoverStyle navBarContainer">
 		<div class="logo"><span class="font-bold">David</span>Malka</div>
 		<TransitionGroup name="slide">
 			<div v-if="show || width >= 833" key="wrapper" class="linkWrapper mobileOpen text-white flex">
@@ -37,7 +37,7 @@
 
 <style scoped>
 	nav {
-		position: absolute;
+		position: relative;
 	}
 	img {
 		position: relative;
@@ -97,7 +97,7 @@
 		text-fill-color: transparent;
 	}
 	.navBarContainer {
-		padding: 3.7rem 1.6rem;
+		padding-block: 3.7rem;
 		height: 9.6rem;
 		position: relative;
 		font-family: "Roboto", sans-serif;

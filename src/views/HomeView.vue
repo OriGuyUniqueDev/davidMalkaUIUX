@@ -1,10 +1,10 @@
 <template>
-	<div >
-		<div class="mainWrapper h-[58.5rem] bg-hoverStyle flex md:justify-around xl:justify-center xl:gap-80">
+	<div class="" >
+		<div class="mainWrapper h-[58.5rem] lg:px-[12rem] bg-hoverStyle flex  xl:justify-center xl:gap-80">
 			<HeroText></HeroText>
 			<ProfilePic></ProfilePic>
 		</div>
-		<div class="text-white flex flex-col md:mx-auto pt-[10.5rem] w-full bg-black">
+		<div class="text-white flex flex-col lg:px-[12rem] md:mx-auto pt-[10.5rem] w-full bg-black">
 			<HomepageCard v-for="card in cardsData" :key="card.title" :alt="card.alt" :title="card.title" :role="card.role" :url="card.url"></HomepageCard>
 		</div>
 		<HomepageHiddenComponent></HomepageHiddenComponent>
