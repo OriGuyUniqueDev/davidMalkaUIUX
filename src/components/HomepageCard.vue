@@ -29,7 +29,7 @@
 		initial: {
 			opacity: 0,
 		},
-		visible: {
+		visibleOnce: {
 			opacity: 1,
 			transition: {
 				duration: 500,

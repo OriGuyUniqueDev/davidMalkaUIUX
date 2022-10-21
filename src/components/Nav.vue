@@ -34,6 +34,11 @@
 				duration: 500,
 			},
 		},
+		visibleOnce:{
+			opacity: 1,
+			y: 0,
+		}
+		
 	});
 </script>
 
