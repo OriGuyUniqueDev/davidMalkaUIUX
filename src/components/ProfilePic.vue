@@ -1,11 +1,11 @@
 <template>
 	<div ref="target" class="">
 		<img class="
-        w-[43.06rem] h-[38.6rem] left-[-70%] relative -top-20
-        sm:w-[60rem] sm:h-[57.6rem] sm:left-0 
+        w-[43.06rem] h-[38.6rem] right-0   absolute -top-20
+        sm:w-[60rem] sm:h-[57.6rem] sm:left-0 sm:relative
         md:w-[72.1rem] md:h-[69.2rem]
         " 
-        src="@/assets/images/profilePic.webp" alt="profile picture" />
+        src="/projectsImages/homePage/profilePic.webp" alt="profile picture" />
 	</div>
 </template>
 

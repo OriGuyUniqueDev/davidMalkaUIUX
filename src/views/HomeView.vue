@@ -1,8 +1,9 @@
 <template>
 	<div class="" >
-		<div class="mainWrapper h-[58.5rem] lg:px-[12rem] bg-hoverStyle flex  xl:justify-center xl:gap-80">
-			<HeroText></HeroText>
-			<ProfilePic></ProfilePic>
+		<div class="mainWrapper h-[58.5rem] bg-hoverStyle flex  justify-between  
+		px-[1.8rem]  lg:px-[12rem] xl:px-[26.4rem] ">
+			<HeroText class="relative" ></HeroText>
+			<ProfilePic class="sm:absolute sm:right-3 md:relative "></ProfilePic>
 		</div>
 		<div class="text-white flex flex-col lg:px-[12rem] md:mx-auto pt-[10.5rem] w-full bg-black">
 			<HomepageCard v-for="card in cardsData" :key="card.title" :alt="card.alt" :title="card.title" :role="card.role" :url="card.url"></HomepageCard>

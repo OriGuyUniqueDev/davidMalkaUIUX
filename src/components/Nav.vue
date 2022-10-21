@@ -1,5 +1,7 @@
 <template>
-	<nav ref="elementWidth" class="flex lg:px-[12rem] justify-between bg-hoverStyle navBarContainer">
+	<nav ref="elementWidth" class="flex
+	 px-[1.8rem]  lg:px-[12rem] xl:px-[26.4rem] 
+	 justify-between bg-hoverStyle navBarContainer">
 		<div class="logo"><span class="font-bold">David</span>Malka</div>
 		<TransitionGroup name="slide">
 			<div v-if="show || width >= 833" key="wrapper" class="linkWrapper mobileOpen text-white flex">

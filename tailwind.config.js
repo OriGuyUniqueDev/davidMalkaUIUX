@@ -6,19 +6,19 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'sm': '550px',
+      'sm': '549px',
       // => @media (min-width: 550px) { ... }
 
-      'md': '834px',
+      'md': '833px',
       // => @media (min-width: 834px) { ... }
 
-      'lg': '1200px',
+      'lg': '1199px',
       // => @media (min-width: 1200px) { ... }
 
       'xl': '1439px',
       // => @media (min-width: 1280px) { ... }
 
-      '2xl': '1920px',
+      '2xl': '1919px',
       // => @media (min-width: 1536px) { ... }
     },
     colors: {
