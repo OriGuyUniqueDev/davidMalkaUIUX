@@ -29,7 +29,7 @@
 		{
 			title: "Ram Aderet",
 			role: "Product Design",
-			url: "/projectsImages/ramAderet/ramAderet.webp",
+			url: "/projectsImages/ramAderet/ramAderet.png",
 			alt: "Ram Aderet project pic",
 			bg: "bg-lightBlue",
 			scale:'scale-125',

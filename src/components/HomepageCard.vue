@@ -1,8 +1,11 @@
 <template>
 	<div ref="elementWidth" class="mainWrapper md:w-[80rem] md:mx-auto flex flex-col mx-4 mb-8 lg:flex-row lg:h-[40rem] lg:w-[128rem] lg:mb-[8.8rem] lg:gap-[14.7rem]">
-			<div class="w-full">
-				<div :class="[bgCard]" class=" rounded-[2rem] md:w-[80rem] md:h-[40rem] lg:w-[56.4rem] 2xl:w-[69rem]  overflow-hidden ">
-					<img :class="[scale,hoverScale]" :src="url" :alt="alt" class="relative " /></div>
+			<div class="w-full ">
+				<RouterLink :to="{ name: 'project', params: { id: title } }">
+					<div :class="[bgCard]" class=" rounded-[2rem] overflow-hidden h-max-[40rem] sm:h-[40rem] md:w-[80rem] md:h-[40rem] lg:w-[56.4rem] 2xl:w-[69rem]  overflow-y-hidden ">
+					<img :class="[scale,hoverScale]" :src="url" :alt="alt" class=" " /></div>
+				</RouterLink>
+				
 			</div>
 		<div class="textButtonWrapper flex justify-between lg:flex-col lg:justify-evenly my-4">
 			<div>
