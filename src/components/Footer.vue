@@ -1,5 +1,5 @@
 <template>
-    <hr class="bg-dividers h-[2px]">
+    
     <div class="flex flex-row h-[13rem] md:h-[12.4rem] bg-transparent my-[1.7rem] justify-around lg:justify-around w-full
     
     ">

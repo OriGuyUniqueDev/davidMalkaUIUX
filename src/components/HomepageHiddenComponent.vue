@@ -11,19 +11,19 @@
 	import { useMotion } from "@vueuse/motion";
 	import { ref } from "vue";
 	const target = ref();
-	const motionInstance = useMotion(target, {
-		initial: {
-			opacity: 0,
+	// const motionInstance = useMotion(target, {
+	// 	initial: {
+	// 		opacity: 0,
 		
-		},
-		visible: {
-			opacity: 1,
+	// 	},
+	// 	visible: {
+	// 		opacity: 1,
 		
-			transition: {
-				duration: 800
-			},
-		},
-	});
+	// 		transition: {
+	// 			duration: 800
+	// 		},
+	// 	},
+	// });
 </script>
 
 <style scoped>
@@ -43,5 +43,6 @@
 		background: linear-gradient(96.02deg, #ff1392 -1.37%, #7b3ce1 46.36%, #10a9ff 95.6%);
 		border-radius: 1000px;
 		font-family: "Outfit", sans-serif;
+		padding-bottom: 0.3rem;
 	}
 </style>

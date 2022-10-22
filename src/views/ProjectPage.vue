@@ -1,7 +1,7 @@
 <template>
-	<div class="w-full ">
+	<div class="w-full  ">
 		<ProjectHero  :bgColor1="data.bgColor" :topImage="data.topImage"></ProjectHero>
-		<div class="px-[1.8rem] md:mx-[12rem] xl:mx-[20rem]">
+		<div class="px-[1.8rem] md:px-[12rem] xl:px-[20rem] ">
 			<div fieldName="about" class="mb-20">
 				<h1 class="text-bold mt-8 text-[3.2rem]">{{ data.projectTitle }}</h1>
 				<p class="text-[1.6rem] lg:w-[50%]">{{ data.details }}</p>
@@ -18,7 +18,7 @@
 				<h2 class="text-white text-bold mt-8 text-[3.2rem] mb-[2rem]">Paint Points</h2>
 				<Slider :cards="data.fourthTitleDetails"></Slider>
 			</div>
-			<div fieldName="challenges" class="mb-[5rem] lg:w-[50%] xl:flex xl:flex-col">
+			<div fieldName="challenges" class="mb-[5rem] lg:w-[100%] xl:flex xl:flex-col">
 				<h2 class="text-white mt-8 text-[3.2rem] mb-[2rem]">{{ data.fifthTitle }}</h2>
 				<Challenges v-for="challenge in data.fifthTitleDetails" :challengeData="challenge"></Challenges>
 			</div>
@@ -34,7 +34,7 @@
 			
 				" :src="data.pic3" alt="" />
 			</div>
-			<hr class="bg-dividers relative left-[-1.8rem] md:left-[-13.8rem] xl:left-[-21.8rem]  w-[100vw] h-[2px]">
+			<hr class="bg-dividers relative left-[-1.8rem] md:left-[-12rem] xl:left-[-20rem]  w-[100vw] h-[2px]">
 			<div fieldName="buttons" class="relative -ml-[1.8rem] md:-ml-[13.8rem] xl:-ml-[21.8rem] w-[100vw]">
 				<div class="flex flex-row justify-between md:justify-evenly md:gap-128 bg-black px-[2.2rem] py-4">
 					<RouterLink :to="{ name: 'project', params: { id: data.btnPre } }">
@@ -56,6 +56,11 @@
 				</div>
 			</div>
 		</div>
+		<hr class="bg-dividers h-[2px]">
+		<div ref="target" class="toAnimate relative ">
+			<Footer></Footer>
+			<!-- <Developer></Developer> -->
+		</div>
 	</div>
 </template>
 
@@ -67,6 +72,8 @@
 	import Challenges from "../components/Challenges.vue";
 	import { onUpdated } from "vue";
 	import { useRouter } from "vue-router";
+import HomepageHiddenComponent from "../components/HomepageHiddenComponent.vue";
+import Footer from "../components/Footer.vue";
 	const router = useRouter();
 
 	let props = defineProps(["id", "data"]);

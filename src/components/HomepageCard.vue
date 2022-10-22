@@ -1,8 +1,8 @@
 <template>
-	<div ref="elementWidth" class="mainWrapper md:w-[80rem] md:mx-auto flex flex-col mx-4 mb-8 lg:flex-row lg:h-[40rem] lg:w-[128rem] lg:mb-[8.8rem] lg:gap-[14.7rem]">
-			<div class="w-full ">
-				<RouterLink :to="{ name: 'project', params: { id: title } }">
-					<div :class="[bgCard]" class=" rounded-[2rem] overflow-hidden h-max-[40rem] sm:h-[40rem] md:w-[80rem] md:h-[40rem] lg:w-[56.4rem] 2xl:w-[69rem]  overflow-y-hidden ">
+	<div ref="elementWidth" class="mainWrapper md:w-[80rem] md:mx-auto flex flex-col mx-4 mb-8 lg:flex-row lg:h-[40rem] lg:w-[128rem] lg:mb-[8.8rem] lg:gap-[14.7rem] ">
+			<div class=" ">
+				<RouterLink class="w-full" :to="{ name: 'project', params: { id: title } }">
+					<div :class="[bgCard]" class=" rounded-[2rem] overflow-hidden h-max-[40rem] sm:h-[40rem] md:w-[80rem] md:h-[40rem] lg:w-[56.4rem] 2xl:w-[69rem]">
 					<img :class="[scale,hoverScale]" :src="url" :alt="alt" class=" " /></div>
 				</RouterLink>
 				
@@ -13,7 +13,7 @@
 				<h2 class="text-greyText text-[3.2rem] leading-[4.032rem]">{{ role }}</h2>
 			</div>
 			<RouterLink :to="{ name: 'project', params: { id: title } }">
-				<button v-if="width >= 550" type="button" class="self-center w-[14.6rem] h-[4.5rem] lg:self-start">View project</button>
+				<button v-if="width >= 550" type="button" class="self-center w-[14.6rem] h-[4.5rem] lg:self-start">View project </button>
 			</RouterLink>
 		</div>
 	</div>
@@ -75,9 +75,9 @@
 	button::before {
 		content: "View Project";
 		font-family: "Outfit", sans-serif;
-		padding-top: 2.3%;
-		letter-spacing: 5%;
-		line-height: 3.3rem;
+		padding-block: 0.9rem;
+		/* letter-spacing: 5%; */
+		/* line-height: 3.3rem; */
 		font-size: 1.6rem;
 		display: block;
 		position: absolute;
@@ -92,9 +92,9 @@
 	button:hover::before {
 		content: "View Project";
 		font-family: "Outfit", sans-serif;
-		padding-top: 2.3%;
-		letter-spacing: 5%;
-		line-height: 3.3rem;
+		padding-block: 0.9rem;
+		/* letter-spacing: 5%; */
+		/* line-height: 3.3rem; */
 		font-size: 1.6rem;
 		display: block;
 		position: absolute;

@@ -334,15 +334,16 @@ construction area.`,
 </script>
 
 <template>
-	<Nav v-if="showNav"></Nav>
-	<ProjectNav :titleId="titleId" v-else></ProjectNav>
-	<router-view ref="routeId" :data="data.find((element) => element.projectName === route.params.id)" :id="route" v-slot="{ Component, route }">
-		<Transition mode="out-in" :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass">
-			<component :is="Component" ref="showNav"></component>
-		</Transition>
-	</router-view>
-	<Footer></Footer>
-	<Developer></Developer>
+	<div class="overflow-hidden w-full">
+		<Nav v-if="showNav"></Nav>
+		<ProjectNav :titleId="titleId" v-else></ProjectNav>
+		<router-view ref="routeId" :data="data.find((element) => element.projectName === route.params.id)" :id="route" v-slot="{ Component, route }">
+			<Transition mode="out-in" :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass">
+				<component :is="Component" ref="showNav"></component>
+			</Transition>
+		</router-view>
+		<Developer></Developer>
+	</div>
 </template>
 
 <style scoped></style>

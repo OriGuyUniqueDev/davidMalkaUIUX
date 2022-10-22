@@ -6,8 +6,8 @@
 			<p class="text-[1.6rem] my-[0.9rem] xl:w-[100rem]">{{ challengeData.paraData.data1 }}</p>
 			<img class="w-[5rem] my-16 md:mx-auto xl:-rotate-90 relative  xl:my-0 xl:self-start" src="/icons/arrowDown.svg" alt="" />
 			<p class="text-[1.6rem] mb-[6.7rem] my-[0.9rem] xl:w-[100rem]">{{ challengeData.paraData.data2 }}</p>
-			<hr class="h-[1px] bg-dividers">
 		</div>
+		<hr class="h-[1px] bg-dividers">
 	</div>
 </template>
 

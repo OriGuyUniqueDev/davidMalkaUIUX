@@ -1,7 +1,9 @@
 <template>
     <div class=" mainWrapper w-[100vw] flex overflow-auto  flex-row gap-4
     md:grid md:grid-cols-2 md:grid-rows-2 md:gap-4 md:w-full 
-    xl:grid xl:grid-cols-4 xl:grid-rows-1 xl:gap-4  ">
+    xl:grid xl:grid-cols-2 xl:grid-rows-1 xl:gap-4
+    2xl:grid 2xl:grid-cols-4 2xl:grid-rows-1 2xl:gap-4
+    ">
         <SliderCard v-for="card in cards" :number="card.number" :title="card.title" :data="card.data" :colorHead="card.color"></SliderCard>
     </div>
 </template>
