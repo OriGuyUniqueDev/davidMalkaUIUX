@@ -34,6 +34,7 @@
 			
 				" :src="data.pic3" alt="" />
 			</div>
+			<hr class="bg-dividers relative left-[-1.8rem] md:left-[-13.8rem] xl:left-[-21.8rem]  w-[100vw] h-[2px]">
 			<div fieldName="buttons" class="relative -ml-[1.8rem] md:-ml-[13.8rem] xl:-ml-[21.8rem] w-[100vw]">
 				<div class="flex flex-row justify-between md:justify-evenly md:gap-128 bg-black px-[2.2rem] py-4">
 					<RouterLink :to="{ name: 'project', params: { id: data.btnPre } }">
