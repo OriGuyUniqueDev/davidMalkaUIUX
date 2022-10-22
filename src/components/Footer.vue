@@ -1,9 +1,9 @@
 <template>
     <hr class="bg-dividers h-[2px]">
-    <div class="flex flex-row bg-transparent justify-around lg:justify-around w-full
-    h-[13rem]
+    <div class="flex flex-row h-[13rem] md:h-[12.4rem] bg-transparent my-[1.7rem] justify-around lg:justify-around w-full
+    
     ">
-        <div class="flexLeft flex flex-col text-greyText text-2xl gap-[1.2rem] lg:gap-[6rem] my-auto  lg:justify-around lg:flex-row">
+        <div class="flexLeft flex flex-col text-greyText text-2xl gap-[2rem] justify-between lg:gap-[6rem]   lg:justify-around lg:flex-row">
             <RouterLink :to="{name:'home'}">
                 <p class="logo"><span class="font-bold">David</span>Malka</p>
             </RouterLink>
@@ -11,10 +11,10 @@
             <a class="lg:leading-[2.3rem]" href="mailto:dudu5malka@gmail.com">dudu5malka@gmail.com</a>
             <a class="lg:leading-[2.3rem]" href="tel:+972547951888">+972547951888</a>
         </div>
-        <div class="flexRight flex gap-[1.2rem] self-baseline flex-row my-auto">
-            <img src="../assets/images/icons/Instagram.svg" alt="Instagram icon">
-            <img src="../assets/images/icons/facebook.svg" alt="facebook icon">
-            <img src="../assets/images/icons/Linkdin.svg" alt="Linkdin icon">
+        <div class="flexRight flex gap-[1.2rem] self-end md:self-baseline  flex-row ">
+            <img width="20" height="20" src="../assets/images/icons/Instagram.svg" alt="Instagram icon">
+            <img width="20" height="20" src="../assets/images/icons/facebook.svg" alt="facebook icon">
+            <img width="20" height="20" src="../assets/images/icons/Linkdin.svg" alt="Linkdin icon">
         </div>
 
     </div>
