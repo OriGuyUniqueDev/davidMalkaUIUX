@@ -1,11 +1,9 @@
 <template>
 	<div ref="elementWidth" class="mainWrapper md:w-[80rem] md:mx-auto flex flex-col mx-4 mb-8 lg:flex-row lg:h-[40rem] lg:w-[128rem] lg:mb-[8.8rem] lg:gap-[14.7rem]">
-		<RouterLink :to="{ name: 'project', params: { id: title } }">
 			<div class="w-full">
-				<h2 class="absolute p-[1.8rem] titleToHide bg-black opacity-95 rounded-xl text-center z-10 text-5xl mx-auto hover:opacity-100 :">Click To See The Project 👆🏼</h2>
-				<img :src="url" :alt="alt" class="relative hover:opacity-80 md:w-[80rem] md:h-[40rem] lg:w-[56.4rem] 2xl:w-[69rem]" />
+				<div :class="[bgCard]" class=" rounded-[2rem] md:w-[80rem] md:h-[40rem] lg:w-[56.4rem] 2xl:w-[69rem]  overflow-hidden ">
+					<img :class="[scale,hoverScale]" :src="url" :alt="alt" class="relative " /></div>
 			</div>
-		</RouterLink>
 		<div class="textButtonWrapper flex justify-between lg:flex-col lg:justify-evenly my-4">
 			<div>
 				<h1 class="text-[900] text-[4.8rem] leading-[6.398rem]">{{ title }}</h1>
@@ -22,7 +20,7 @@
 	import { ref } from "vue";
 	import { useElementSize } from "@vueuse/core";
 	import { useMotion } from "@vueuse/motion";
-	const props = defineProps(["title", "role", "url", "alt"]);
+	const props = defineProps(["title", "role", "url", "alt",'bgCard','scale','hoverScale']);
 	let elementWidth = ref(null);
 	const { width } = useElementSize(elementWidth);
 	const motionInstance = useMotion(elementWidth, {
