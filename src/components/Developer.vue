@@ -13,6 +13,7 @@
 .mainWrapper{
     display: flex;
     justify-content: center;
+    font-family: Outfit;
   
 }
 

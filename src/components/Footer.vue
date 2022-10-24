@@ -18,7 +18,7 @@
         </div>
 
     </div>
-    <Developer class="absolute  bottom-0 left-0 right-0"></Developer>
+    <Developer></Developer>
 </template>
 
 <script setup>

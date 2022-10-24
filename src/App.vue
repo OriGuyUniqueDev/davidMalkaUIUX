@@ -333,7 +333,7 @@ construction area.`,
 </script>
 
 <template>
-	<div class="w-full snap-y snap-mandatory overflow-y-scroll overflow-x-hidden  snap-always">
+	<div class="w-full  overflow-x-hidden">
 		<Nav v-if="showNav"></Nav>
 		<ProjectNav :titleId="titleId" v-else></ProjectNav>
 		<router-view ref="routeId" :data="data.find((element) => element.projectName === route.params.id)" :id="route" v-slot="{ Component, route }">

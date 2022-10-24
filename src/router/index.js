@@ -42,7 +42,7 @@ const router = createRouter({
 			// could also be
 			// el: document.getElementById('main'),
 			el: "#app",
-			top: 100,
+			top: 0,
 			behavior: "smooth",
 		};
 	},
