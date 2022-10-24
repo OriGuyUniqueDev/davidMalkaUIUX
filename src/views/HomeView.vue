@@ -1,5 +1,5 @@
 <template>
-	<div class="snap-y snap-mandatory">
+	<div class="">
 		<div class="mainWrapper snap-center overflow-hidden h-[58.5rem] bg-hoverStyle flex justify-between px-[1.8rem] lg:px-[12rem] xl:px-[26.4rem]">
 			<HeroText class="relative"></HeroText>
 			<ProfilePic class="sm:absolute sm:right-3 md:relative"></ProfilePic>

@@ -7,10 +7,10 @@
 	import ProjectNav from "./components/ProjectNav.vue";
 	const route = useRoute();
 
-	let titleId = ref(route.params.id)
+	let titleId = ref(route.params.id);
 	onUpdated(() => {
-		titleId.value = route.params.id
-	})
+		titleId.value = route.params.id;
+	});
 	let showNav = ref(false);
 	watch(showNav, () => {
 		route.name !== "project" ? (showNav.value = true) : (showNav.value = false);
@@ -19,7 +19,7 @@
 		{
 			projectName: "Paamonim",
 			bgColor: `bg-purple`,
-			color:'text-purple',
+			color: "text-purple",
 			topImage: "/projectsImages/paamonim/topImage.png",
 			projectTitle: "About the project",
 			details: `Paamonim is a non-profit social organization.
@@ -56,53 +56,53 @@ Bells guides and provides financial advice to anyone interested, and provides th
 			],
 			fourthTitle: `Research & Users`,
 			fourthTitleDetails: [
-			{
+				{
 					number: `#1`,
 					title: `Managment economy`,
 					data: "most of users can’t follow after their money expands. ",
-					color:'text-purple'
+					color: "text-purple",
 				},
 				{
 					number: `#2`,
-					title: 'Budget management',
+					title: "Budget management",
 					data: `Simple users, specially old users, complicate with makeing budget every month.`,
-					color:'text-purple'
+					color: "text-purple",
 				},
 				{
 					number: `#3`,
 					title: `Managment economy`,
 					data: "most of users can’t follow after their money expands. ",
-					color:'text-purple'
+					color: "text-purple",
 				},
 				{
 					number: `#4`,
-					title: 'Budget management',
+					title: "Budget management",
 					data: `Simple users, specially old users, complicate with makeing budget every month.`,
-					color:'text-purple'
+					color: "text-purple",
 				},
 			],
 			fifthTitle: `Challenges`,
 			fifthTitleDetails: [
 				{
 					title: `🔔 Make It Simple`,
-					paraData:{
+					paraData: {
 						data1: `Apps of this kind for the most part are complicated with lots of information, the challenge was to create something a little more experiential, fun and easy to use.`,
-						data2: `Use of illustrations and pastel colors. I’ve tried to create a nice copywriting that speaks to simple users.`
-					}
+						data2: `Use of illustrations and pastel colors. I’ve tried to create a nice copywriting that speaks to simple users.`,
+					},
 				},
 				{
 					title: `🔔 Use it fast`,
-					paraData:{
+					paraData: {
 						data1: `In an app of this type, there is a lot of data that needs to be entered specifically from the user's side. One of the challenges was to create a template that would be quick and easy to use`,
 						data2: `One of the solution was create layers templates (toast).
-					Those templates are make the fast experiance, enter information easily and always indicate the users where they are during using the app, and let them returning without unnecessary screen transitions.`
-					}
+					Those templates are make the fast experiance, enter information easily and always indicate the users where they are during using the app, and let them returning without unnecessary screen transitions.`,
+					},
 				},
 			],
 			pic2: "/projectsImages/paamonim/pic1.png",
 			pic3: "/projectsImages/paamonim/pic2.png",
-			btnPre:'Abra Web & Mobile',
-			btnFor: 'Ram Aderet'
+			btnPre: "Abra Web & Mobile",
+			btnFor: "Ram Aderet",
 		},
 		{
 			projectName: "Ram Aderet",
@@ -135,25 +135,25 @@ construction area.`,
 					number: `#1`,
 					title: `Managment economy`,
 					data: "most of users can’t follow after their money expands. ",
-					color:'text-purple'
+					color: "text-purple",
 				},
 				{
 					number: `#2`,
-					title: 'Budget management',
+					title: "Budget management",
 					data: `Simple users, specially old users, complicate with makeing budget every month.`,
-					color:'text-purple'
+					color: "text-purple",
 				},
 				{
 					number: `#3`,
 					title: `Managment economy`,
 					data: "most of users can’t follow after their money expands. ",
-					color:'text-purple'
+					color: "text-purple",
 				},
 				{
 					number: `#4`,
-					title: 'Budget management',
+					title: "Budget management",
 					data: `Simple users, specially old users, complicate with makeing budget every month.`,
-					color:'text-purple'
+					color: "text-purple",
 				},
 			],
 			fifthTitle: `Challenges`,
@@ -163,21 +163,21 @@ construction area.`,
 					paraData: {
 						data1: `Apps of this kind for the most part are complicated with lots of information, the challenge was to create something a little more experiential, fun and easy to use.`,
 						data2: `Use of illustrations and pastel colors. I’ve tried to create a nice copywriting that speaks to simple users.`,
-					}
+					},
 				},
 				{
 					title: `ram - Use it fast`,
-					paraData:{
+					paraData: {
 						data1: `In an app of this type, there is a lot of data that needs to be entered specifically from the user's side. One of the challenges was to create a template that would be quick and easy to use`,
 						data2: `One of the solution was create layers templates (toast).
 					Those templates are make the fast experiance, enter information easily and always indicate the users where they are during using the app, and let them returning without unnecessary screen transitions.`,
-					}
+					},
 				},
 			],
 			pic2: "/projectsImages/paamonim/pic1.png",
 			pic3: "/projectsImages/paamonim/pic2.png",
-			btnPre:'Paamonim',
-			btnFor: 'Patricia'
+			btnPre: "Paamonim",
+			btnFor: "Patricia",
 		},
 		{
 			projectName: "Abra Web & Mobile",
@@ -210,25 +210,25 @@ construction area.`,
 					number: `#1`,
 					title: `Managment economy`,
 					data: "most of users can’t follow after their money expands. ",
-					color:'text-purple'
+					color: "text-purple",
 				},
 				{
 					number: `#2`,
-					title: 'Budget management',
+					title: "Budget management",
 					data: `Simple users, specially old users, complicate with makeing budget every month.`,
-					color:'text-purple'
+					color: "text-purple",
 				},
 				{
 					number: `#3`,
 					title: `Managment economy`,
 					data: "most of users can’t follow after their money expands. ",
-					color:'text-purple'
+					color: "text-purple",
 				},
 				{
 					number: `#4`,
-					title: 'Budget management',
+					title: "Budget management",
 					data: `Simple users, specially old users, complicate with makeing budget every month.`,
-					color:'text-purple'
+					color: "text-purple",
 				},
 			],
 			fifthTitle: `Challenges`,
@@ -238,21 +238,21 @@ construction area.`,
 					paraData: {
 						data1: `Apps of this kind for the most part are complicated with lots of information, the challenge was to create something a little more experiential, fun and easy to use.`,
 						data2: `Use of illustrations and pastel colors. I’ve tried to create a nice copywriting that speaks to simple users.`,
-					}
+					},
 				},
 				{
 					title: `abra - Use it fast`,
-					paraData:{
+					paraData: {
 						data1: `In an app of this type, there is a lot of data that needs to be entered specifically from the user's side. One of the challenges was to create a template that would be quick and easy to use`,
 						data2: `One of the solution was create layers templates (toast).
 					Those templates are make the fast experiance, enter information easily and always indicate the users where they are during using the app, and let them returning without unnecessary screen transitions.`,
-					}
+					},
 				},
 			],
 			pic2: "/projectsImages/paamonim/pic1.png",
 			pic3: "/projectsImages/paamonim/pic2.png",
-			btnPre:'Patricia',
-			btnFor: 'Paamonim'
+			btnPre: "Patricia",
+			btnFor: "Paamonim",
 		},
 		{
 			projectName: "Patricia",
@@ -285,25 +285,25 @@ construction area.`,
 					number: `#1`,
 					title: `Managment economy`,
 					data: "most of users can’t follow after their money expands. ",
-					color:'text-purple'
+					color: "text-purple",
 				},
 				{
 					number: `#2`,
-					title: 'Budget management',
+					title: "Budget management",
 					data: `Simple users, specially old users, complicate with makeing budget every month.`,
-					color:'text-purple'
+					color: "text-purple",
 				},
 				{
 					number: `#3`,
 					title: `Managment economy`,
 					data: "most of users can’t follow after their money expands. ",
-					color:'text-purple'
+					color: "text-purple",
 				},
 				{
 					number: `#4`,
-					title: 'Budget management',
+					title: "Budget management",
 					data: `Simple users, specially old users, complicate with makeing budget every month.`,
-					color:'text-purple'
+					color: "text-purple",
 				},
 			],
 			fifthTitle: `Challenges`,
@@ -313,28 +313,27 @@ construction area.`,
 					paraData: {
 						data1: `Apps of this kind for the most part are complicated with lots of information, the challenge was to create something a little more experiential, fun and easy to use.`,
 						data2: `Use of illustrations and pastel colors. I’ve tried to create a nice copywriting that speaks to simple users.`,
-					}
+					},
 				},
 				{
 					title: `Patricia - Use it fast`,
-					paraData:{
+					paraData: {
 						data1: `In an app of this type, there is a lot of data that needs to be entered specifically from the user's side. One of the challenges was to create a template that would be quick and easy to use`,
 						data2: `One of the solution was create layers templates (toast).
 					Those templates are make the fast experiance, enter information easily and always indicate the users where they are during using the app, and let them returning without unnecessary screen transitions.`,
-					}
+					},
 				},
 			],
 			pic2: "/projectsImages/paamonim/pic1.png",
 			pic3: "/projectsImages/paamonim/pic2.png",
-			btnPre:'Ram Aderet',
-			btnFor: 'Abra Web & Mobile'
+			btnPre: "Ram Aderet",
+			btnFor: "Abra Web & Mobile",
 		},
-		
 	];
 </script>
 
 <template>
-	<div class="w-full">
+	<div class="w-full snap-y snap-mandatory overflow-y-scroll overflow-x-hidden max-h-[100vh] snap-always">
 		<Nav v-if="showNav"></Nav>
 		<ProjectNav :titleId="titleId" v-else></ProjectNav>
 		<router-view ref="routeId" :data="data.find((element) => element.projectName === route.params.id)" :id="route" v-slot="{ Component, route }">

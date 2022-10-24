@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full  ">
+	<div class="w-full ">
 		<ProjectHero  :bgColor1="data.bgColor" :topImage="data.topImage"></ProjectHero>
 		<div class="px-[1.8rem] md:px-[12rem] xl:px-[20rem] ">
 			<div fieldName="about" class="mb-20">
