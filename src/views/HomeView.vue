@@ -1,14 +1,14 @@
 <template>
-	<div class="">
+	<div ref="root" class="scrollingContainer">
 		<div class="mainWrapper snap-center overflow-hidden h-[58.5rem] bg-hoverStyle flex justify-between px-[1.8rem] lg:px-[12rem] xl:px-[26.4rem]">
 			<HeroText class="relative"></HeroText>
 			<ProfilePic class="sm:absolute sm:right-3 md:relative"></ProfilePic>
 		</div>
-		<div class="text-white snap-start  relative flex flex-col lg:px-[12rem] xl:px-[26.4rem] md:mx-auto pt-[10.5rem] w-full bg-black">
-			<HomepageCard v-for="card in cardsData" :key="card.title" :hoverScale="card.hoverScale" :scale="card.scale" :alt="card.alt" :title="card.title" :bgCard="card.bg" :role="card.role" :url="card.url" ></HomepageCard>
+		<div class="text-white snap-start relative flex flex-col lg:px-[12rem] xl:px-[26.4rem] md:mx-auto pt-[10.5rem] w-full bg-black">
+			<HomepageCard v-for="card in cardsData" :key="card.title" :hoverScale="card.hoverScale" :scale="card.scale" :alt="card.alt" :title="card.title" :bgCard="card.bg" :role="card.role" :url="card.url"></HomepageCard>
 		</div>
-		<div class="relative"></div>
-		<div v-motion-fade-visible class="toAnimate snap-end scroll-mb-6 h-[65vh] mt-[7rem] relative">
+		<div class="relative h-[5rem] w-full"></div>
+		<div v-intersection-observer="onIntersectionObserver" v-motion-fade-visible class="toAnimate snap-end scroll-mb-6 h-[65vh] mt-[7rem] relative">
 			<HomepageHiddenComponent></HomepageHiddenComponent>
 			<Footer></Footer>
 			<!-- <Developer></Developer> -->
@@ -24,8 +24,19 @@
 	import Footer from "../components/Footer.vue";
 	import Developer from "../components/Developer.vue";
 	import { useMotion } from "@vueuse/motion";
-	import { ref } from "vue";
+	import { onMounted, ref } from "vue";
+	import { vIntersectionObserver } from "@vueuse/components";
 	const target = ref();
+	const root = ref(null);
+	const isVisible = ref(false);
+	function onIntersectionObserver([{ isIntersecting }]) {
+		isVisible.value = isIntersecting;
+		
+		if (isVisible.value === true) {
+			console.log('enter visible');
+			window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+		}
+	}
 
 	const cardsData = [
 		{

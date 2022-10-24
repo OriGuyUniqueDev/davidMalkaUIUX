@@ -1,17 +1,14 @@
-<template >
+<template>
 	<span ref="elementWidth" class="w-full block"></span>
-	<nav   class=" flex
-	md:px-[10rem] lg:px-[12rem] xl:px-[20rem]
-	  
-	  flex-row justify-between py-10 bg-hoverStyle navBarContainer">
-		<div v-if="!show" class="flex  gap-[1.95rem]">
-			<RouterLink :to="{name: 'home'}">
+	<nav class="flex md:px-[10rem] lg:px-[12rem] xl:px-[20rem] flex-row justify-between py-10 bg-hoverStyle navBarContainer">
+		<div v-if="!show" class="flex gap-[1.95rem]">
+			<RouterLink :to="{ name: 'home' }">
 				<img class="backArrow relative top-[0.8rem]" src="../assets/images/icons/backIcon.svg" alt="" />
 			</RouterLink>
 			<div class="logo">{{ titleId }}</div>
 		</div>
 		<TransitionGroup name="slide">
-			<div v-if="show || width > 834" key="wrapper" class="linkWrapper mobileOpen  text-white flex">
+			<div v-if="show || width > 834" key="wrapper" class="linkWrapper mobileOpen text-white flex">
 				<RouterLink key="home" class="mr-4" :to="{ name: 'home' }">Home</RouterLink>
 				<RouterLink key="about" :to="{ name: 'about' }">About</RouterLink>
 			</div>
@@ -25,7 +22,7 @@
 	import { useElementSize } from "@vueuse/core";
 	import { useMotion } from "@vueuse/motion";
 	import { useRoute } from "vue-router";
-	let props = defineProps(['titleId'])
+	let props = defineProps(["titleId"]);
 	const route = useRoute();
 	let show = ref(false);
 	let routeId = ref(route.params.id);
@@ -45,11 +42,8 @@
 			},
 		},
 	});
-	let logoTitle = ref(route.params.id) ;
-	onUpdated(() => {
-		console.log('update');
-	})
-
+	let logoTitle = ref(route.params.id);
+	onUpdated(() => {});
 </script>
 
 <style scoped>
