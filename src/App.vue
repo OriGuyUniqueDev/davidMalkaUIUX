@@ -334,7 +334,7 @@ construction area.`,
 </script>
 
 <template>
-	<div class="overflow-y-scroll max-h-[100vh] w-full">
+	<div class="overflow-y-scroll max-h-[100vh]  snap-y snap-mandatory snap-always w-full">
 		<Nav v-if="showNav"></Nav>
 		<ProjectNav :titleId="titleId" v-else></ProjectNav>
 		<router-view ref="routeId" :data="data.find((element) => element.projectName === route.params.id)" :id="route" v-slot="{ Component, route }">
@@ -342,7 +342,7 @@ construction area.`,
 				<component :is="Component" ref="showNav"></component>
 			</Transition>
 		</router-view>
-		<Developer></Developer>
+		<!-- <Developer></Developer> -->
 	</div>
 </template>
 

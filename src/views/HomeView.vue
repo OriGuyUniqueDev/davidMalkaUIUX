@@ -1,16 +1,15 @@
 <template>
-	<div   >
-		<div class="mainWrapper overflow-y-scroll h-[58.5rem] bg-hoverStyle flex justify-between px-[1.8rem] lg:px-[12rem] xl:px-[26.4rem]">
+	<div class="snap-y snap-mandatory">
+		<div class="mainWrapper snap-center overflow-hidden h-[58.5rem] bg-hoverStyle flex justify-between px-[1.8rem] lg:px-[12rem] xl:px-[26.4rem]">
 			<HeroText class="relative"></HeroText>
 			<ProfilePic class="sm:absolute sm:right-3 md:relative"></ProfilePic>
 		</div>
-		<div class="text-white relative flex flex-col lg:px-[12rem] xl:px-[26.4rem] md:mx-auto pt-[10.5rem] w-full bg-black">
+		<div class="text-white snap-start  relative flex flex-col lg:px-[12rem] xl:px-[26.4rem] md:mx-auto pt-[10.5rem] w-full bg-black">
 			<HomepageCard v-for="card in cardsData" :key="card.title" :hoverScale="card.hoverScale" :scale="card.scale" :alt="card.alt" :title="card.title" :bgCard="card.bg" :role="card.role" :url="card.url" ></HomepageCard>
 		</div>
 		<div class="relative"></div>
-		<div ref="target"
-		class="toAnimate relative ">
-			<HomepageHiddenComponent ></HomepageHiddenComponent>
+		<div v-motion-fade-visible class="toAnimate snap-end scroll-mb-6 h-[65vh] mt-[7rem] relative">
+			<HomepageHiddenComponent></HomepageHiddenComponent>
 			<Footer></Footer>
 			<!-- <Developer></Developer> -->
 		</div>
@@ -78,11 +77,11 @@
 </script>
 
 <style lang="css" scoped>
-.toAnimate{
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	box-shadow: 0rem -1rem 1rem rgba(69, 69, 69, 0.195);
-}
+	.toAnimate {
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		box-shadow: 0rem -1rem 1rem rgba(69, 69, 69, 0.195);
+	}
 </style>
