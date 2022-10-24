@@ -8,10 +8,7 @@
 			<HomepageCard v-for="card in cardsData" :key="card.title" :hoverScale="card.hoverScale" :scale="card.scale" :alt="card.alt" :title="card.title" :bgCard="card.bg" :role="card.role" :url="card.url" ></HomepageCard>
 		</div>
 		<div class="relative"></div>
-		<div ref="target"  v-motion 
-		:initial="{y:300,transition:{duration:1500}}"
-		:visible="{y:-100,transition:{duration:1500}}"
-		:leave="{y:300,transition:{duration:1500}}"
+		<div ref="target"
 		class="toAnimate relative ">
 			<HomepageHiddenComponent ></HomepageHiddenComponent>
 			<Footer></Footer>
@@ -69,15 +66,15 @@
 			hoverScale: " hover:scale-[1.60]",
 		},
 	];
-		const {variant} = useMotion(target, {
-		visible: {
-			display:'block',
-			opacity: 1,
-			transition: {
-				duration: 2000
-			},
-		},
-	});
+	// 	const {variant} = useMotion(target, {
+	// 	visible: {
+	// 		display:'block',
+	// 		opacity: 1,
+	// 		transition: {
+	// 			duration: 2000
+	// 		},
+	// 	},
+	// });
 </script>
 
 <style lang="css" scoped>
